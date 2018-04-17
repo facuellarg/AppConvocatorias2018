@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  type_student: MyString
+  end_date: 2018-04-17
+  admin: one
+  vacants: 
+  hours_per_week: 1
+  payout: 1.5
+  duration: 1
+
+two:
+  name: MyString
+  description: MyString
+  type_student: MyString
+  end_date: 2018-04-17
+  admin: two
+  vacants: 
+  hours_per_week: 1
+  payout: 1.5
+  duration: 1

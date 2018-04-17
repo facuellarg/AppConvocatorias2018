@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :convocations
   devise_for :admins
   post 'admin_token' => 'admin_token#create'
   resources :documents
