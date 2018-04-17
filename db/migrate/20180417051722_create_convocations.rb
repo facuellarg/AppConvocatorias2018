@@ -6,7 +6,7 @@ class CreateConvocations < ActiveRecord::Migration[5.1]
       t.string :type_student
       t.date :end_date
       t.references :admin, foreign_key: true
-      t.number :vacants
+      t.integer :vacants
       t.integer :hours_per_week
       t.float :payout
       t.integer :duration
