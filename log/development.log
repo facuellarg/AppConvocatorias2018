@@ -404,3 +404,4 @@ FOREIGN KEY ("user_document_id")
             FROM sqlite_temp_master
             WHERE name='index_users_on_email' AND type='index'
 [0m
+  [1m[36mApplication Load (3.4ms)[0m  [1m[34mSELECT  "applications".* FROM "applications" LIMIT ?[0m  [["LIMIT", 11]]
