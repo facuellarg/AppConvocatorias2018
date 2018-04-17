@@ -1,0 +1,2 @@
+class Dependence < ApplicationRecord
+end

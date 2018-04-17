@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :documents
   post 'user_token' => 'user_token#create'
   post '/users' => 'register#create'
   devise_for :users
