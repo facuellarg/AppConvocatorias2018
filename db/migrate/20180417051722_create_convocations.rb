@@ -10,7 +10,7 @@ class CreateConvocations < ActiveRecord::Migration[5.1]
       t.integer :hours_per_week
       t.float :payout
       t.integer :duration
-
+      
       t.timestamps
     end
   end

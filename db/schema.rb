@@ -103,6 +103,7 @@ ActiveRecord::Schema.define(version: 20180417211501) do
 
   create_table "dependences", force: :cascade do |t|
     t.string "name"
+    t.string "level"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
