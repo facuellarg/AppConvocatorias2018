@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admins
+  post 'admin_token' => 'admin_token#create'
   resources :documents
   post 'user_token' => 'user_token#create'
   post '/users' => 'register#create'

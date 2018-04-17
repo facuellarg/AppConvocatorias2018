@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  lastname: MyString
+  permits: MyString
+  dependence: one
+
+two:
+  name: MyString
+  lastname: MyString
+  permits: MyString
+  dependence: two
