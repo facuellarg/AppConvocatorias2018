@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   # GET /users
   def index
     @users = current_user
-
     render json: @users
   end
 
@@ -16,7 +15,8 @@ class UsersController < ApplicationController
 
   # POST /users
   def create
-    @user = User.new(registre_params)
+ 
+    @user = User.new(user_params)
 
     if @user.save
       @user.save
@@ -48,10 +48,6 @@ class UsersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def user_params
-      params.require(:user).permit(:name, :PAPA, :PBM)
+      params.permit(:name ,:lastname, :email, :password, :password_confirmation, :dependence_id)
     end
-    def registre_params
-      params.require.permit(:name ,:email, :password, :password_confirmation)
-    end
-
 end
