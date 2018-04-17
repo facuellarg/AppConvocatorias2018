@@ -6,4 +6,5 @@ class Convocation < ApplicationRecord
 
   has_many :applications
   has_many :student, :through => :applications
+
 end

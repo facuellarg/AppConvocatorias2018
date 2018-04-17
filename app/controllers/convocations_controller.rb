@@ -23,7 +23,7 @@ class ConvocationsController < ApplicationController
       render json: @convocation.errors, status: :unprocessable_entity
     end
   end
-
+  
   # PATCH/PUT /convocations/1
   def update
     if @convocation.update(convocation_params)
