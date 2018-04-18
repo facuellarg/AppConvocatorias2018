@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20180417211501) do
     t.string "name"
     t.string "lastname"
     t.string "permits"
+    t.integer "phone_ext"
     t.integer "dependence_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

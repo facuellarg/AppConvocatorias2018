@@ -4,6 +4,7 @@ class CreateAdmins < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :lastname
       t.string :permits
+      t.integer :phone_ext
       t.references :dependence, foreign_key: true
 
       t.timestamps
