@@ -15,6 +15,7 @@ class AdminsController < ApplicationController
 
   # POST /admins
   def create
+ 
     @admin = Admin.new(admin_params)
 
     if @admin.save
@@ -46,6 +47,7 @@ class AdminsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def admin_params
-      params.fetch(:admin, {})
+      #params.fetch(:admin, {})
+      params.permit(:name,:lastname,:email,:permits,:password,:password_confirmation,:phone_ext,:dependence_id)
     end
 end
