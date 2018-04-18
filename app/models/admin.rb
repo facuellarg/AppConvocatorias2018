@@ -8,4 +8,13 @@ class Admin < ApplicationRecord
   #validates :password, confirmation: true
 
   belongs_to :dependence
+
+  def populate
+    out_object = {}
+    out_object[:name] = self.name
+    out_object[:lastname] = self.lastname
+    out_object[:phone] = self.phone
+
+    return out_object 
+  end
 end

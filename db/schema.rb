@@ -10,13 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180417211501) do
+ActiveRecord::Schema.define(version: 20180418095838) do
 
   create_table "activities", force: :cascade do |t|
     t.integer "convocation_id"
     t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.index ["convocation_id"], name: "index_activities_on_convocation_id"
   end
 
@@ -87,26 +85,8 @@ ActiveRecord::Schema.define(version: 20180417211501) do
     t.index ["admin_id"], name: "index_convocations_on_admin_id"
   end
 
-  create_table "convocations_need_files", force: :cascade do |t|
-    t.integer "convocation_id"
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["convocation_id"], name: "index_convocations_need_files_on_convocation_id"
-  end
-
-  create_table "criteria", force: :cascade do |t|
-    t.integer "convocation_id"
-    t.string "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["convocation_id"], name: "index_criteria_on_convocation_id"
-  end
-
   create_table "dependences", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "documents", force: :cascade do |t|
@@ -115,6 +95,16 @@ ActiveRecord::Schema.define(version: 20180417211501) do
     t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "description"
+    t.integer "convocation_id"
+    t.index ["convocation_id"], name: "index_profiles_on_convocation_id"
+  end
+
+  create_table "required_files", force: :cascade do |t|
+    t.string "name"
   end
 
   create_table "requirements", force: :cascade do |t|

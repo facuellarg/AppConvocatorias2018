@@ -1,0 +1,2 @@
+class RequiredFile < ApplicationRecord
+end

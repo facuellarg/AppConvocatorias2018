@@ -4,7 +4,7 @@ class CreateActivities < ActiveRecord::Migration[5.1]
       t.references :convocation, foreign_key: true
       t.string :description
 
-      t.timestamps
+      
     end
   end
 end
