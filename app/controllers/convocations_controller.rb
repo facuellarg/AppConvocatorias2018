@@ -13,7 +13,11 @@ class ConvocationsController < ApplicationController
 
   # GET /convocations/1
   def show
-    render json: @convocation
+    #render json: @convocation
+    respond_to do |format|
+      format.json {render   json: @convocation}
+      format.pdf {render template: 'convocations/template_pdf',pdf: @convocation.name.downcase}
+    end
   end
 
   # POST /convocations

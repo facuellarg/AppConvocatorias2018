@@ -6087,3 +6087,18 @@ Completed 201 Created in 203ms (Views: 2.3ms | ActiveRecord: 27.2ms)
   [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (2.0ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/convocations/1.pdf" for 127.0.0.1 at 2018-04-18 09:35:29 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ConvocationsController#show as PDF
+  Parameters: {"id"=>"1"}
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" WHERE "convocations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+***************WICKED***************
+  Rendering convocations/template_pdf.pdf.erb
+  Rendered convocations/template_pdf.pdf.erb (1.3ms)
+  Rendering text template
+  Rendered text template (0.1ms)
+Sent data programa peama.pdf (15.7ms)
+Completed 200 OK in 4823ms (Views: 15.2ms | ActiveRecord: 1.1ms)
+
+

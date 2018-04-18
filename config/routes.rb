@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :admins
-  resources :convocations
+  resources :convocations, only: [:create,:show]
   post 'admin_token' => 'admin_token#create'
   resources :documents
   post 'user_token' => 'user_token#create'
