@@ -1986,3 +1986,171 @@ Migrating to AddDependenceRefToUser (20180417211501)
 [0m
   [1m[36mConvocation Load (0.4ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" LIMIT ?[0m  [["LIMIT", 11]]
   [1m[35m (0.4ms)[0m  [1m[34mSELECT "dependences"."id" FROM "dependences"[0m
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-17 20:56:18 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ConvocationsController#search as */*
+  Parameters: {"page"=>"1", "level"=>"pregrado", "dependence"=>"1", "payout_min"=>"350000", "payout_max"=>"350000", "duration_min"=>"10", "duration_max"=>"20", "hours_per_week_min"=>"10", "hours_per_week_max"=>"20", "convocation"=>{"level"=>"pregrado"}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.6ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (6.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (42.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+  [1m[36mDependence Load (15.8ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mDependence Load (0.4ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (41.6ms)[0m  [1m[32mINSERT INTO "dependences" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ingenieria"], ["created_at", "2018-04-18 02:06:52.940671"], ["updated_at", "2018-04-18 02:06:52.940671"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password", "dependence_id") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2018-04-18 02:07:39.156721"], ["updated_at", "2018-04-18 02:07:39.156721"], ["email", "user@test.com"], ["encrypted_password", "$2a$11$WqyqDEWEGI1WoeNWSchjae9dOWx7T1JnptEluOPQdDnvg3WTF58z."], ["dependence_id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/user_token" for 127.0.0.1 at 2018-04-17 21:08:43 -0500
+Processing by UserTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"user@test.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"user@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+Completed 201 Created in 263ms (Views: 0.4ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-17 21:09:13 -0500
+Processing by ConvocationsController#search as */*
+  Parameters: {"page"=>"1", "level"=>"pregrado", "dependence"=>"1", "payout_min"=>"350000", "payout_max"=>"350000", "duration_min"=>"10", "duration_max"=>"20", "hours_per_week_min"=>"10", "hours_per_week_max"=>"20", "convocation"=>{"level"=>"pregrado"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.0ms)
+
+
+  
+ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (6 for 8) in: convocations.level = ? AND dependences.id IN (?) AND convocations.payout BETWEEN (?) AND (?) AND convocations.duration BETWEEN (?) AND (?) AND convocations.hours_per_week BETWEEN (?) AND (?)):
+  
+app/models/convocation.rb:11:in `search'
+app/controllers/convocations_controller.rb:49:in `search'
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-17 21:15:42 -0500
+Processing by ConvocationsController#search as */*
+  Parameters: {"page"=>"1", "level"=>"pregrado", "dependence"=>"1", "payout_min"=>"350000", "payout_max"=>"350000", "duration_min"=>"10", "duration_max"=>"20", "hours_per_week_min"=>"10", "hours_per_week_max"=>"20", "convocation"=>{"level"=>"pregrado"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN ('1') AND convocations.payout BETWEEN ('350000') AND ('350000') AND convocations.duration BETWEEN ('10') AND ('20') AND convocations.hours_per_week BETWEEN ('10') AND ('20')) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+Completed 200 OK in 50ms (Views: 20.5ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-17 21:15:47 -0500
+Processing by ConvocationsController#search as */*
+  Parameters: {"page"=>"1", "level"=>"pregrado", "dependence"=>"1", "payout_min"=>"350000", "payout_max"=>"350000", "duration_min"=>"10", "duration_max"=>"20", "hours_per_week_min"=>"10", "hours_per_week_max"=>"20", "convocation"=>{"level"=>"pregrado"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[36mConvocation Load (0.4ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN ('1') AND convocations.payout BETWEEN ('350000') AND ('350000') AND convocations.duration BETWEEN ('10') AND ('20') AND convocations.hours_per_week BETWEEN ('10') AND ('20')) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-17 21:15:48 -0500
+Processing by ConvocationsController#search as */*
+  Parameters: {"page"=>"1", "level"=>"pregrado", "dependence"=>"1", "payout_min"=>"350000", "payout_max"=>"350000", "duration_min"=>"10", "duration_max"=>"20", "hours_per_week_min"=>"10", "hours_per_week_max"=>"20", "convocation"=>{"level"=>"pregrado"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[36mConvocation Load (0.4ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN ('1') AND convocations.payout BETWEEN ('350000') AND ('350000') AND convocations.duration BETWEEN ('10') AND ('20') AND convocations.hours_per_week BETWEEN ('10') AND ('20')) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+Completed 200 OK in 7ms (Views: 1.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-17 21:15:49 -0500
+Processing by ConvocationsController#search as */*
+  Parameters: {"page"=>"1", "level"=>"pregrado", "dependence"=>"1", "payout_min"=>"350000", "payout_max"=>"350000", "duration_min"=>"10", "duration_max"=>"20", "hours_per_week_min"=>"10", "hours_per_week_max"=>"20", "convocation"=>{"level"=>"pregrado"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[36mConvocation Load (0.9ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN ('1') AND convocations.payout BETWEEN ('350000') AND ('350000') AND convocations.duration BETWEEN ('10') AND ('20') AND convocations.hours_per_week BETWEEN ('10') AND ('20')) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+Completed 200 OK in 6ms (Views: 1.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-17 21:15:49 -0500
+Processing by ConvocationsController#search as */*
+  Parameters: {"page"=>"1", "level"=>"pregrado", "dependence"=>"1", "payout_min"=>"350000", "payout_max"=>"350000", "duration_min"=>"10", "duration_max"=>"20", "hours_per_week_min"=>"10", "hours_per_week_max"=>"20", "convocation"=>{"level"=>"pregrado"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[36mConvocation Load (0.5ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN ('1') AND convocations.payout BETWEEN ('350000') AND ('350000') AND convocations.duration BETWEEN ('10') AND ('20') AND convocations.hours_per_week BETWEEN ('10') AND ('20')) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-17 21:15:50 -0500
+Processing by ConvocationsController#search as */*
+  Parameters: {"page"=>"1", "level"=>"pregrado", "dependence"=>"1", "payout_min"=>"350000", "payout_max"=>"350000", "duration_min"=>"10", "duration_max"=>"20", "hours_per_week_min"=>"10", "hours_per_week_max"=>"20", "convocation"=>{"level"=>"pregrado"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN ('1') AND convocations.payout BETWEEN ('350000') AND ('350000') AND convocations.duration BETWEEN ('10') AND ('20') AND convocations.hours_per_week BETWEEN ('10') AND ('20')) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-17 21:15:50 -0500
+Processing by ConvocationsController#search as */*
+  Parameters: {"page"=>"1", "level"=>"pregrado", "dependence"=>"1", "payout_min"=>"350000", "payout_max"=>"350000", "duration_min"=>"10", "duration_max"=>"20", "hours_per_week_min"=>"10", "hours_per_week_max"=>"20", "convocation"=>{"level"=>"pregrado"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN ('1') AND convocations.payout BETWEEN ('350000') AND ('350000') AND convocations.duration BETWEEN ('10') AND ('20') AND convocations.hours_per_week BETWEEN ('10') AND ('20')) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-17 21:15:50 -0500
+Processing by ConvocationsController#search as */*
+  Parameters: {"page"=>"1", "level"=>"pregrado", "dependence"=>"1", "payout_min"=>"350000", "payout_max"=>"350000", "duration_min"=>"10", "duration_max"=>"20", "hours_per_week_min"=>"10", "hours_per_week_max"=>"20", "convocation"=>{"level"=>"pregrado"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[36mConvocation Load (0.5ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN ('1') AND convocations.payout BETWEEN ('350000') AND ('350000') AND convocations.duration BETWEEN ('10') AND ('20') AND convocations.hours_per_week BETWEEN ('10') AND ('20')) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-17 21:15:50 -0500
+Processing by ConvocationsController#search as */*
+  Parameters: {"page"=>"1", "level"=>"pregrado", "dependence"=>"1", "payout_min"=>"350000", "payout_max"=>"350000", "duration_min"=>"10", "duration_max"=>"20", "hours_per_week_min"=>"10", "hours_per_week_max"=>"20", "convocation"=>{"level"=>"pregrado"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN ('1') AND convocations.payout BETWEEN ('350000') AND ('350000') AND convocations.duration BETWEEN ('10') AND ('20') AND convocations.hours_per_week BETWEEN ('10') AND ('20')) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+Completed 200 OK in 6ms (Views: 1.4ms | ActiveRecord: 0.8ms)
+
+
