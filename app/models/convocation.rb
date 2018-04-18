@@ -1,17 +1,22 @@
 class Convocation < ApplicationRecord
   belongs_to :admin
 
-  has_many :convocation_dependences
+  has_many :convocation_dependences, dependent: :destroy
   has_many :dependences, :through => :convocation_dependences
 
-  has_many :applications
+  has_many :applications, dependent: :destroy
   has_many :student, :through => :applications
 
-  has_many :requirements
-  has_many :criteria
-  has_many :activities
-  has_many :required_files
-  has_many :profiles
+  has_many :requirements, dependent: :destroy
+  has_many :activities, dependent: :destroy
+  has_many :required_files, dependent: :destroy
+  has_many :profiles, dependent: :destroy
+
+  accepts_nested_attributes_for :requirements
+  accepts_nested_attributes_for :activities
+  accepts_nested_attributes_for :required_files
+  accepts_nested_attributes_for :profiles
+  accepts_nested_attributes_for :convocation_dependences
 
   def self.search(search_params)
     

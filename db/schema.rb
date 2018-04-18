@@ -105,6 +105,8 @@ ActiveRecord::Schema.define(version: 20180418095838) do
 
   create_table "required_files", force: :cascade do |t|
     t.string "name"
+    t.integer "convocation_id"
+    t.index ["convocation_id"], name: "index_required_files_on_convocation_id"
   end
 
   create_table "requirements", force: :cascade do |t|

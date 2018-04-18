@@ -3618,3 +3618,2472 @@ Unpermitted parameter: :convocation
 Completed 200 OK in 146ms (Views: 2.1ms | ActiveRecord: 4.4ms)
 
 
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 06:00:56 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements"=>[{"description"=>"ser mayor de edad"}], "dependences"=>["1", "2", "3"], "profiles"=>[{"description"=>"con creditos terminados"}], "activities"=>[{"description"=>"limpiar la casa"}], "required_files"=>[{"name"=>"cedula"}], "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Unpermitted parameters: :requirements, :profiles, :activities, :required_files, :convocation
+Completed 204 No Content in 3ms (ActiveRecord: 1.1ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 06:02:19 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements"=>[{"description"=>"ser mayor de edad"}], "dependences"=>["1", "2", "3"], "profiles"=>[{"description"=>"con creditos terminados"}], "activities"=>[{"description"=>"limpiar la casa"}], "required_files"=>[{"name"=>"cedula"}], "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Unpermitted parameters: :requirements, :profiles, :activities, :required_files, :convocation
+Completed 204 No Content in 3ms (ActiveRecord: 0.9ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 06:03:10 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements"=>[{"description"=>"ser mayor de edad"}], "dependences"=>["1", "2", "3"], "profiles"=>[{"description"=>"con creditos terminados"}], "activities"=>[{"description"=>"limpiar la casa"}], "required_files"=>[{"name"=>"cedula"}], "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Unpermitted parameters: :requirements, :profiles, :activities, :required_files, :convocation
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mConvocationDependence Load (0.5ms)[0m  [1m[34mSELECT  "convocation_dependences".* FROM "convocation_dependences" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 07:51:46 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Unpermitted parameter: :convocation
+Completed 204 No Content in 2ms (ActiveRecord: 1.0ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 07:52:33 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Unpermitted parameter: :convocation
+Completed 204 No Content in 4ms (ActiveRecord: 2.7ms)
+
+
+  [1m[36mConvocation Load (1.7ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 07:53:51 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Unpermitted parameter: :convocation
+Unpermitted parameter: :convocation
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.5ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'requirements_attributes' for Convocation.):
+  
+app/controllers/convocations_controller.rb:25:in `create'
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 07:55:57 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Unpermitted parameter: :convocation
+Unpermitted parameter: :convocation
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 2.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'profiles_attributes' for Convocation.):
+  
+app/controllers/convocations_controller.rb:25:in `create'
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 07:56:40 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Unpermitted parameter: :convocation
+Unpermitted parameter: :convocation
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 5.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'convocation_id' for RequiredFile.):
+  
+app/controllers/convocations_controller.rb:25:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRequiredFiles (20180418095838)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "required_files"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20180418095838"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_documents_on_user_document_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_documents_on_user_document_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_applications_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_applications_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocation_dependences_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocation_dependences_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocations_on_admin_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocations_on_admin_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_profiles_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_profiles_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_requirements_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_requirements_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_documents_on_document_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_documents_on_document_id' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRequiredFiles (20180418095838)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "required_files" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "convocation_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_required_files_on_convocation_id" ON "required_files" ("convocation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180418095838"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_documents_on_user_document_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_documents_on_user_document_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+[0m
+  [1m[35m (2.5ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_applications_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_applications_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocation_dependences_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocation_dependences_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocations_on_admin_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocations_on_admin_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_profiles_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_profiles_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_required_files_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_required_files_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_requirements_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_requirements_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_documents_on_document_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_documents_on_document_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 08:00:04 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Unpermitted parameter: :convocation
+Unpermitted parameter: :convocation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 251ms (Views: 0.4ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/admins" for 127.0.0.1 at 2018-04-18 08:01:54 -0500
+Processing by AdminsController#create as */*
+  Parameters: {"name"=>"julian", "lastname"=>"garzon", "email"=>"admin@test.com", "phone_ext"=>"1123", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dependence_id"=>"1", "permits"=>"creador"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.4ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "admins" ("name", "lastname", "permits", "phone_ext", "dependence_id", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "julian"], ["lastname", "garzon"], ["permits", "creador"], ["phone_ext", 1123], ["dependence_id", 1], ["created_at", "2018-04-18 13:01:55.598018"], ["updated_at", "2018-04-18 13:01:55.598018"], ["email", "admin@test.com"], ["encrypted_password", "$2a$11$la46aMyI9zs9KcVg9qNr5.gYyXeL/ZbHr2urnzvtneP.kcvw/Aieu"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 587ms (Views: 1.3ms | ActiveRecord: 30.2ms)
+
+
+Started POST "/admin_token" for 127.0.0.1 at 2018-04-18 08:02:17 -0500
+Processing by AdminTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"user@test.com", "password"=>"[FILTERED]"}, "admin_token"=>{"auth"=>{"email"=>"user@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.8ms)
+
+
+Started POST "/admin_token" for 127.0.0.1 at 2018-04-18 08:02:24 -0500
+Processing by AdminTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}, "admin_token"=>{"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Admin:0x00007f8a6237fd90>
+Did you mean?  authenticatable_salt):
+  
+activemodel (5.1.6) lib/active_model/attribute_methods.rb:432:in `method_missing'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:13:in `authenticate'
+activesupport (5.1.6) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.6) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.6) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/admin_token" for 127.0.0.1 at 2018-04-18 08:03:34 -0500
+Processing by AdminTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}, "admin_token"=>{"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (0.7ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 17.4ms)
+
+
+  
+NoMethodError (undefined method `authenticate' for #<Admin:0x00007f8a61a99fa0>
+Did you mean?  authenticatable_salt):
+  
+activemodel (5.1.6) lib/active_model/attribute_methods.rb:432:in `method_missing'
+knock (2.1.1) app/controllers/knock/auth_token_controller.rb:13:in `authenticate'
+activesupport (5.1.6) lib/active_support/callbacks.rb:413:in `block in make_lambda'
+activesupport (5.1.6) lib/active_support/callbacks.rb:197:in `block (2 levels) in halting'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:12:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.1.6) lib/active_support/callbacks.rb:198:in `block in halting'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `block in invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `each'
+activesupport (5.1.6) lib/active_support/callbacks.rb:507:in `invoke_before'
+activesupport (5.1.6) lib/active_support/callbacks.rb:130:in `run_callbacks'
+actionpack (5.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.6) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.6) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.6) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.6) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.6) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.6) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.6) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.6) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.6) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.6) lib/action_dispatch/routing/route_set.rb:844:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.4) lib/rack/etag.rb:25:in `call'
+rack (2.0.4) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.4) lib/rack/head.rb:12:in `call'
+activerecord (5.1.6) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.6) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.6) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/admin_token" for 127.0.0.1 at 2018-04-18 08:04:21 -0500
+Processing by AdminTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}, "admin_token"=>{"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+Completed 201 Created in 451ms (Views: 0.2ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 08:05:31 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 8ms (ActiveRecord: 1.3ms)
+
+
+Started POST "/admin_token" for 127.0.0.1 at 2018-04-18 08:05:47 -0500
+Processing by AdminTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}, "admin_token"=>{"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+Completed 201 Created in 222ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/admin_token" for 127.0.0.1 at 2018-04-18 08:06:06 -0500
+Processing by AdminTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"user@test.com", "password"=>"[FILTERED]"}, "admin_token"=>{"auth"=>{"email"=>"user@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started POST "/admin_token" for 127.0.0.1 at 2018-04-18 08:06:12 -0500
+Processing by AdminTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}, "admin_token"=>{"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+Completed 201 Created in 190ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/admin_token" for 127.0.0.1 at 2018-04-18 08:06:14 -0500
+Processing by AdminTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}, "admin_token"=>{"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+Completed 201 Created in 182ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/admin_token" for 127.0.0.1 at 2018-04-18 08:06:15 -0500
+Processing by AdminTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}, "admin_token"=>{"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+Completed 201 Created in 190ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 08:06:38 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 08:06:51 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 2ms (ActiveRecord: 1.2ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 08:06:53 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 08:06:54 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 08:07:03 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/admin_token" for 127.0.0.1 at 2018-04-18 08:07:10 -0500
+Processing by AdminTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"user@test.com", "password"=>"[FILTERED]"}, "admin_token"=>{"auth"=>{"email"=>"user@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started POST "/user_token" for 127.0.0.1 at 2018-04-18 08:07:16 -0500
+Processing by UserTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"user@test.com", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"user@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+Completed 201 Created in 234ms (Views: 0.7ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 08:07:27 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/admin_token" for 127.0.0.1 at 2018-04-18 08:07:43 -0500
+Processing by AdminTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"user@test.com", "password"=>"[FILTERED]"}, "admin_token"=>{"auth"=>{"email"=>"user@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "user@test.com"], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started POST "/admin_token" for 127.0.0.1 at 2018-04-18 08:07:47 -0500
+Processing by AdminTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}, "admin_token"=>{"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+Completed 201 Created in 212ms (Views: 0.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 08:08:24 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+Filter chain halted as :authenticate_admin rendered or redirected
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 08:13:31 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+Unpermitted parameter: :convocation
+Unpermitted parameter: :convocation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 159ms (Views: 0.2ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 08:14:29 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+Unpermitted parameter: :convocation
+Unpermitted parameter: :convocation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 140ms (Views: 0.4ms | ActiveRecord: 6.5ms)
+
+
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/admins" for 127.0.0.1 at 2018-04-18 08:15:01 -0500
+Processing by AdminsController#create as */*
+  Parameters: {"name"=>"julian", "lastname"=>"garzon", "email"=>"admin@test.com", "phone_ext"=>"1123", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dependence_id"=>"1", "permits"=>"creador"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.1ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 222ms (Views: 0.3ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 08:15:15 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+Unpermitted parameter: :convocation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 136ms (Views: 0.3ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 08:15:31 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+Unpermitted parameter: :convocation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 208ms (Views: 0.4ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 08:18:18 -0500
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+Unpermitted parameter: :convocation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 419ms (Views: 0.4ms | ActiveRecord: 9.2ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 08:19:56 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+Completed 500 Internal Server Error in 123ms (ActiveRecord: 2.4ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'lastname' for Convocation.):
+  
+app/controllers/convocations_controller.rb:28:in `create'
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 08:21:05 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+Unpermitted parameter: :convocation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (25.4ms)[0m  [1m[32mINSERT INTO "convocations" ("name", "description", "level", "end_date", "admin_id", "vacants", "hours_per_week", "payout", "duration", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "programa peama"], ["description", "entregar subsidios"], ["level", "pregrado"], ["end_date", "2018-03-09"], ["admin_id", 1], ["vacants", 10], ["hours_per_week", 20], ["payout", 250000.0], ["duration", 180], ["created_at", "2018-04-18 13:21:06.598513"], ["updated_at", "2018-04-18 13:21:06.598513"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "requirements" ("convocation_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["convocation_id", 1], ["description", "primero"], ["created_at", "2018-04-18 13:21:06.648625"], ["updated_at", "2018-04-18 13:21:06.648625"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "requirements" ("convocation_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["convocation_id", 1], ["description", "segundo"], ["created_at", "2018-04-18 13:21:06.651192"], ["updated_at", "2018-04-18 13:21:06.651192"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "requirements" ("convocation_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["convocation_id", 1], ["description", "tercero"], ["created_at", "2018-04-18 13:21:06.653914"], ["updated_at", "2018-04-18 13:21:06.653914"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("convocation_id", "description") VALUES (?, ?)[0m  [["convocation_id", 1], ["description", "primero"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("convocation_id", "description") VALUES (?, ?)[0m  [["convocation_id", 1], ["description", "segundo"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("convocation_id", "description") VALUES (?, ?)[0m  [["convocation_id", 1], ["description", "tercero"]]
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "required_files" ("name", "convocation_id") VALUES (?, ?)[0m  [["name", "cedula"], ["convocation_id", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "required_files" ("name", "convocation_id") VALUES (?, ?)[0m  [["name", "papa"], ["convocation_id", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "required_files" ("name", "convocation_id") VALUES (?, ?)[0m  [["name", "historia"], ["convocation_id", 1]]
+  [1m[35mSQL (15.2ms)[0m  [1m[32mINSERT INTO "profiles" ("description", "convocation_id") VALUES (?, ?)[0m  [["description", "primero"], ["convocation_id", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "profiles" ("description", "convocation_id") VALUES (?, ?)[0m  [["description", "segundo"], ["convocation_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "profiles" ("description", "convocation_id") VALUES (?, ?)[0m  [["description", "tercero"], ["convocation_id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 443ms (Views: 2.7ms | ActiveRecord: 54.8ms)
+
+
+  [1m[36mConvocation Load (21.5ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mConvocation Load (0.4ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRequirement Load (19.4ms)[0m  [1m[34mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.4ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT  "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mRequiredFile Load (0.5ms)[0m  [1m[34mSELECT  "required_files".* FROM "required_files" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProfile Load (30.2ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActivity Load (30.8ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (1.4ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mDependence Load (2.9ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocationDependence Load (34.2ms)[0m  [1m[34mSELECT  "convocation_dependences".* FROM "convocation_dependences" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDependence Load (0.4ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" WHERE "convocations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (16.2ms)[0m  [1m[32mINSERT INTO "convocation_dependences" ("convocation_id", "dependence_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["convocation_id", 1], ["dependence_id", 1], ["created_at", "2018-04-18 13:52:14.987612"], ["updated_at", "2018-04-18 13:52:14.987612"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDependence Load (0.1ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.4ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConvocationDependence Load (0.3ms)[0m  [1m[34mSELECT  "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConvocationDependence Load (0.2ms)[0m  [1m[34mSELECT  "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConvocationDependence Load (0.1ms)[0m  [1m[34mSELECT  "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConvocationDependence Load (0.1ms)[0m  [1m[34mSELECT  "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConvocationDependence Load (0.2ms)[0m  [1m[34mSELECT  "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.4ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConvocationDependence Load (0.2ms)[0m  [1m[34mSELECT  "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConvocationDependence Load (0.2ms)[0m  [1m[34mSELECT  "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.4ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConvocationDependence Load (0.4ms)[0m  [1m[34mSELECT  "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConvocationDependence Load (0.2ms)[0m  [1m[34mSELECT  "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConvocationDependence Load (0.2ms)[0m  [1m[34mSELECT  "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConvocationDependence Load (0.2ms)[0m  [1m[34mSELECT  "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocationDependence Load (0.3ms)[0m  [1m[34mSELECT "convocation_dependences".* FROM "convocation_dependences"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (56.8ms)[0m  [1m[31mDELETE FROM "convocation_dependences" WHERE "convocation_dependences"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mConvocation Load (0.4ms)[0m  [1m[34mSELECT "convocations".* FROM "convocations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (62.9ms)[0m  [1m[31mDELETE FROM "convocations" WHERE "convocations"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mConvocation Load (0.4ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT "convocations".* FROM "convocations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "convocations" WHERE "convocations"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180411145417)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "lastname" varchar, "level" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180411145417"]]
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDeviseToUsers (20180411145606)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" datetime[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" datetime[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "current_sign_in_at" datetime[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "last_sign_in_at" datetime[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "current_sign_in_ip" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "last_sign_in_ip" varchar[0m
+  [1m[35m (26.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180411145606"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDependences (20180417041804)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "dependences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417041804"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDocuments (20180417041858)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address" varchar, "name" varchar, "type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417041858"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAdmins (20180417042328)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "lastname" varchar, "permits" varchar, "phone_ext" integer, "dependence_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_bd56dc3d43"
+FOREIGN KEY ("dependence_id")
+  REFERENCES "dependences" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_admins_on_dependence_id" ON "admins" ("dependence_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417042328"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDeviseToAdmins (20180417042502)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "admins" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "admins" ADD "reset_password_token" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "reset_password_sent_at" datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "admins" ADD "remember_created_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "admins" ADD "current_sign_in_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "last_sign_in_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "current_sign_in_ip" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "last_sign_in_ip" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417042502"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateConvocations (20180417051722)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "convocations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "type_student" varchar, "level" varchar, "end_date" date, "admin_id" integer, "vacants" integer, "hours_per_week" integer, "payout" float, "duration" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_f31c4e2f7c"
+FOREIGN KEY ("admin_id")
+  REFERENCES "admins" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_convocations_on_admin_id" ON "convocations" ("admin_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417051722"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActivities (20180417051922)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "convocation_id" integer, "description" varchar, CONSTRAINT "fk_rails_686be1c437"
+FOREIGN KEY ("convocation_id")
+  REFERENCES "convocations" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_activities_on_convocation_id" ON "activities" ("convocation_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417051922"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRequirements (20180417052125)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "requirements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "convocation_id" integer, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_e05cfb4096"
+FOREIGN KEY ("convocation_id")
+  REFERENCES "convocations" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_requirements_on_convocation_id" ON "requirements" ("convocation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417052125"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateConvocationDependences (20180417053152)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "convocation_dependences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "convocation_id" integer, "dependence_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_convocation_dependences_on_convocation_id" ON "convocation_dependences" ("convocation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_convocation_dependences_on_dependence_id" ON "convocation_dependences" ("dependence_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417053152"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateApplications (20180417054314)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "student_id" integer, "convocation_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_06e63a643c"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+, CONSTRAINT "fk_rails_892c46b9bc"
+FOREIGN KEY ("convocation_id")
+  REFERENCES "convocations" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_applications_on_student_id" ON "applications" ("student_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_applications_on_convocation_id" ON "applications" ("convocation_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417054314"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUserDocuments (20180417060013)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "user_documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "student_id" integer, "document_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_13dfbbf76d"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+, CONSTRAINT "fk_rails_9a2a0b4576"
+FOREIGN KEY ("document_id")
+  REFERENCES "documents" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_user_documents_on_student_id" ON "user_documents" ("student_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_user_documents_on_document_id" ON "user_documents" ("document_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417060013"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateApplicationDocuments (20180417063011)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "application_documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "application_id" integer, "user_document_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_36ca51faa0"
+FOREIGN KEY ("application_id")
+  REFERENCES "applications" ("id")
+, CONSTRAINT "fk_rails_294a97436b"
+FOREIGN KEY ("user_document_id")
+  REFERENCES "user_documents" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_application_documents_on_application_id" ON "application_documents" ("application_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_application_documents_on_user_document_id" ON "application_documents" ("user_document_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417063011"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDependenceRefToUser (20180417211501)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "dependence_id" integer[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_dependence_id" ON "users" ("dependence_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417211501"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProfiles (20180418095510)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "profiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "convocation_id" integer, CONSTRAINT "fk_rails_c7e34b0270"
+FOREIGN KEY ("convocation_id")
+  REFERENCES "convocations" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_profiles_on_convocation_id" ON "profiles" ("convocation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180418095510"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRequiredFiles (20180418095838)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "required_files" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "convocation_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_required_files_on_convocation_id" ON "required_files" ("convocation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180418095838"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-18 14:02:05.382757"], ["updated_at", "2018-04-18 14:02:05.382757"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_documents_on_user_document_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_documents_on_user_document_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_applications_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_applications_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocation_dependences_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocation_dependences_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocations_on_admin_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocations_on_admin_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_profiles_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_profiles_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_required_files_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_required_files_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_requirements_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_requirements_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_documents_on_document_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_documents_on_document_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_documents_on_user_document_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_documents_on_user_document_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_applications_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_applications_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocation_dependences_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocation_dependences_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocations_on_admin_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocations_on_admin_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_profiles_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_profiles_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_required_files_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_required_files_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_requirements_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_requirements_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_documents_on_document_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_documents_on_document_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180411145417)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "lastname" varchar, "level" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180411145417"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDeviseToUsers (20180411145606)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "current_sign_in_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "last_sign_in_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "current_sign_in_ip" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "last_sign_in_ip" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180411145606"]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDependences (20180417041804)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "dependences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417041804"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDocuments (20180417041858)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address" varchar, "name" varchar, "type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417041858"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAdmins (20180417042328)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "lastname" varchar, "permits" varchar, "phone_ext" integer, "dependence_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_bd56dc3d43"
+FOREIGN KEY ("dependence_id")
+  REFERENCES "dependences" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_admins_on_dependence_id" ON "admins" ("dependence_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417042328"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDeviseToAdmins (20180417042502)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "admins" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "admins" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "admins" ADD "reset_password_token" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "admins" ADD "reset_password_sent_at" datetime[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "admins" ADD "remember_created_at" datetime[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "admins" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "admins" ADD "current_sign_in_at" datetime[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "admins" ADD "last_sign_in_at" datetime[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "admins" ADD "current_sign_in_ip" varchar[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "admins" ADD "last_sign_in_ip" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417042502"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateConvocations (20180417051722)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "convocations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "type_student" varchar, "level" varchar, "end_date" date, "admin_id" integer, "vacants" integer, "hours_per_week" integer, "payout" float, "duration" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_f31c4e2f7c"
+FOREIGN KEY ("admin_id")
+  REFERENCES "admins" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_convocations_on_admin_id" ON "convocations" ("admin_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417051722"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActivities (20180417051922)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "convocation_id" integer, "description" varchar, CONSTRAINT "fk_rails_686be1c437"
+FOREIGN KEY ("convocation_id")
+  REFERENCES "convocations" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_activities_on_convocation_id" ON "activities" ("convocation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417051922"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRequirements (20180417052125)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "requirements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "convocation_id" integer, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_e05cfb4096"
+FOREIGN KEY ("convocation_id")
+  REFERENCES "convocations" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_requirements_on_convocation_id" ON "requirements" ("convocation_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417052125"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateConvocationDependences (20180417053152)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "convocation_dependences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "convocation_id" integer, "dependence_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_convocation_dependences_on_convocation_id" ON "convocation_dependences" ("convocation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_convocation_dependences_on_dependence_id" ON "convocation_dependences" ("dependence_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417053152"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateApplications (20180417054314)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "student_id" integer, "convocation_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_06e63a643c"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+, CONSTRAINT "fk_rails_892c46b9bc"
+FOREIGN KEY ("convocation_id")
+  REFERENCES "convocations" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_applications_on_student_id" ON "applications" ("student_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE  INDEX "index_applications_on_convocation_id" ON "applications" ("convocation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417054314"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUserDocuments (20180417060013)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "user_documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "student_id" integer, "document_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_13dfbbf76d"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+, CONSTRAINT "fk_rails_9a2a0b4576"
+FOREIGN KEY ("document_id")
+  REFERENCES "documents" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_user_documents_on_student_id" ON "user_documents" ("student_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_user_documents_on_document_id" ON "user_documents" ("document_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417060013"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateApplicationDocuments (20180417063011)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "application_documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "application_id" integer, "user_document_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_36ca51faa0"
+FOREIGN KEY ("application_id")
+  REFERENCES "applications" ("id")
+, CONSTRAINT "fk_rails_294a97436b"
+FOREIGN KEY ("user_document_id")
+  REFERENCES "user_documents" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_application_documents_on_application_id" ON "application_documents" ("application_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_application_documents_on_user_document_id" ON "application_documents" ("user_document_id")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417063011"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDependenceRefToUser (20180417211501)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "dependence_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_dependence_id" ON "users" ("dependence_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417211501"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProfiles (20180418095510)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "profiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "convocation_id" integer, CONSTRAINT "fk_rails_c7e34b0270"
+FOREIGN KEY ("convocation_id")
+  REFERENCES "convocations" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_profiles_on_convocation_id" ON "profiles" ("convocation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180418095510"]]
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRequiredFiles (20180418095838)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "required_files" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "convocation_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_required_files_on_convocation_id" ON "required_files" ("convocation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180418095838"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-18 14:03:08.591460"], ["updated_at", "2018-04-18 14:03:08.591460"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_documents_on_user_document_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_documents_on_user_document_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_applications_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_applications_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocation_dependences_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocation_dependences_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocations_on_admin_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocations_on_admin_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_profiles_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_profiles_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_required_files_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_required_files_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_requirements_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_requirements_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_documents_on_document_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_documents_on_document_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+Started POST "/admins" for 127.0.0.1 at 2018-04-18 09:03:25 -0500
+Processing by AdminsController#create as */*
+  Parameters: {"name"=>"julian", "lastname"=>"garzon", "email"=>"admin@test.com", "phone_ext"=>"1123", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dependence_id"=>"1", "permits"=>"creador"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 294ms (Views: 0.5ms | ActiveRecord: 3.0ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "dependences" ("name") VALUES (?)[0m  [["name", "ingenieria"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "dependences" ("name") VALUES (?)[0m  [["name", "ciencia"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/admins" for 127.0.0.1 at 2018-04-18 09:04:12 -0500
+Processing by AdminsController#create as */*
+  Parameters: {"name"=>"julian", "lastname"=>"garzon", "email"=>"admin@test.com", "phone_ext"=>"1123", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dependence_id"=>"1", "permits"=>"creador"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.1ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "admins" ("name", "lastname", "permits", "phone_ext", "dependence_id", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "julian"], ["lastname", "garzon"], ["permits", "creador"], ["phone_ext", 1123], ["dependence_id", 1], ["created_at", "2018-04-18 14:04:12.767398"], ["updated_at", "2018-04-18 14:04:12.767398"], ["email", "admin@test.com"], ["encrypted_password", "$2a$11$qCYdxV8cNmIl95l5L0kM0eIipJ1hGx71c/kUTz922B92HAQc15Y0e"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 228ms (Views: 2.0ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/admin_token" for 127.0.0.1 at 2018-04-18 09:04:31 -0500
+Processing by AdminTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}, "admin_token"=>{"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+Completed 201 Created in 201ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 09:06:29 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation_dependences_attributes"=>{"0"=>{"dependence_id"=>"1"}, "1"=>{"dependence_id"=>"2"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameters: :convocation_dependences_attributes, :convocation
+Unpermitted parameters: :convocation_dependences_attributes, :convocation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "convocations" ("name", "description", "level", "end_date", "admin_id", "vacants", "hours_per_week", "payout", "duration", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "programa peama"], ["description", "entregar subsidios"], ["level", "pregrado"], ["end_date", "2018-03-09"], ["admin_id", 1], ["vacants", 10], ["hours_per_week", 20], ["payout", 250000.0], ["duration", 180], ["created_at", "2018-04-18 14:06:29.533764"], ["updated_at", "2018-04-18 14:06:29.533764"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "requirements" ("convocation_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["convocation_id", 1], ["description", "primero"], ["created_at", "2018-04-18 14:06:29.535992"], ["updated_at", "2018-04-18 14:06:29.535992"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "requirements" ("convocation_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["convocation_id", 1], ["description", "segundo"], ["created_at", "2018-04-18 14:06:29.537594"], ["updated_at", "2018-04-18 14:06:29.537594"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "requirements" ("convocation_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["convocation_id", 1], ["description", "tercero"], ["created_at", "2018-04-18 14:06:29.538716"], ["updated_at", "2018-04-18 14:06:29.538716"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("convocation_id", "description") VALUES (?, ?)[0m  [["convocation_id", 1], ["description", "primero"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "activities" ("convocation_id", "description") VALUES (?, ?)[0m  [["convocation_id", 1], ["description", "segundo"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "activities" ("convocation_id", "description") VALUES (?, ?)[0m  [["convocation_id", 1], ["description", "tercero"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "required_files" ("name", "convocation_id") VALUES (?, ?)[0m  [["name", "cedula"], ["convocation_id", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "required_files" ("name", "convocation_id") VALUES (?, ?)[0m  [["name", "papa"], ["convocation_id", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "required_files" ("name", "convocation_id") VALUES (?, ?)[0m  [["name", "historia"], ["convocation_id", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "profiles" ("description", "convocation_id") VALUES (?, ?)[0m  [["description", "primero"], ["convocation_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "profiles" ("description", "convocation_id") VALUES (?, ?)[0m  [["description", "segundo"], ["convocation_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "profiles" ("description", "convocation_id") VALUES (?, ?)[0m  [["description", "tercero"], ["convocation_id", 1]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 227ms (Views: 2.5ms | ActiveRecord: 8.5ms)
+
+
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConvocationDependence Load (0.1ms)[0m  [1m[34mSELECT  "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mConvocationDependence Load (0.1ms)[0m  [1m[34mSELECT  "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT "convocations".* FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mConvocationDependence Load (0.4ms)[0m  [1m[34mSELECT "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE "applications"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mRequirement Load (0.4ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT "convocations".* FROM "convocations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mConvocationDependence Load (0.2ms)[0m  [1m[34mSELECT "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE "applications"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mRequirement Load (0.2ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[35mSQL (15.0ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 3]]
+  [1m[35m (2.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mConvocation Load (0.4ms)[0m  [1m[34mSELECT "convocations".* FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mConvocationDependence Load (0.1ms)[0m  [1m[34mSELECT "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE "applications"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mRequirement Load (0.1ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT "convocations".* FROM "convocations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mConvocationDependence Load (0.1ms)[0m  [1m[34mSELECT "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE "applications"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mRequirement Load (0.1ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT "convocations".* FROM "convocations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mConvocationDependence Load (0.1ms)[0m  [1m[34mSELECT "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE "applications"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mRequirement Load (0.1ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mConvocation Load (0.4ms)[0m  [1m[34mSELECT "convocations".* FROM "convocations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mConvocationDependence Load (0.2ms)[0m  [1m[34mSELECT "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE "applications"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mRequirement Load (0.1ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mConvocation Load (0.7ms)[0m  [1m[34mSELECT "convocations".* FROM "convocations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mConvocationDependence Load (0.2ms)[0m  [1m[34mSELECT "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE "applications"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mRequirement Load (0.1ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT "convocations".* FROM "convocations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mConvocationDependence Load (0.1ms)[0m  [1m[34mSELECT "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE "applications"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 3]]
+  [1m[35m (39.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT "convocations".* FROM "convocations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mConvocationDependence Load (0.1ms)[0m  [1m[34mSELECT "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mApplication Load (0.1ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE "applications"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mRequirement Load (0.1ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT "convocations".* FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mConvocationDependence Load (0.4ms)[0m  [1m[34mSELECT "convocation_dependences".* FROM "convocation_dependences" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mApplication Load (0.2ms)[0m  [1m[34mSELECT "applications".* FROM "applications" WHERE "applications"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[36mRequirement Load (0.2ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 2]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "requirements" WHERE "requirements"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180411145417)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "lastname" varchar, "level" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180411145417"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDeviseToUsers (20180411145606)
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" varchar[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "current_sign_in_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "last_sign_in_at" datetime[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "current_sign_in_ip" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "last_sign_in_ip" varchar[0m
+  [1m[35m (44.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180411145606"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDependences (20180417041804)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "dependences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417041804"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDocuments (20180417041858)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address" varchar, "name" varchar, "type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417041858"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAdmins (20180417042328)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "lastname" varchar, "permits" varchar, "phone_ext" integer, "dependence_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_bd56dc3d43"
+FOREIGN KEY ("dependence_id")
+  REFERENCES "dependences" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_admins_on_dependence_id" ON "admins" ("dependence_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417042328"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDeviseToAdmins (20180417042502)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "admins" ADD "email" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "encrypted_password" varchar DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "reset_password_token" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "reset_password_sent_at" datetime[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "admins" ADD "remember_created_at" datetime[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "admins" ADD "sign_in_count" integer DEFAULT 0 NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "current_sign_in_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "last_sign_in_at" datetime[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "current_sign_in_ip" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "admins" ADD "last_sign_in_ip" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_email" ON "admins" ("email")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_admins_on_reset_password_token" ON "admins" ("reset_password_token")[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417042502"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateConvocations (20180417051722)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "convocations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "type_student" varchar, "level" varchar, "end_date" date, "admin_id" integer, "vacants" integer, "hours_per_week" integer, "payout" float, "duration" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_f31c4e2f7c"
+FOREIGN KEY ("admin_id")
+  REFERENCES "admins" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX "index_convocations_on_admin_id" ON "convocations" ("admin_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417051722"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateActivities (20180417051922)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "activities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "convocation_id" integer, "description" varchar, CONSTRAINT "fk_rails_686be1c437"
+FOREIGN KEY ("convocation_id")
+  REFERENCES "convocations" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_activities_on_convocation_id" ON "activities" ("convocation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417051922"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRequirements (20180417052125)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "requirements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "convocation_id" integer, "description" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_e05cfb4096"
+FOREIGN KEY ("convocation_id")
+  REFERENCES "convocations" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_requirements_on_convocation_id" ON "requirements" ("convocation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417052125"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateConvocationDependences (20180417053152)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "convocation_dependences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "convocation_id" integer, "dependence_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_convocation_dependences_on_convocation_id" ON "convocation_dependences" ("convocation_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_convocation_dependences_on_dependence_id" ON "convocation_dependences" ("dependence_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417053152"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateApplications (20180417054314)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "applications" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "student_id" integer, "convocation_id" integer, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_06e63a643c"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+, CONSTRAINT "fk_rails_892c46b9bc"
+FOREIGN KEY ("convocation_id")
+  REFERENCES "convocations" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_applications_on_student_id" ON "applications" ("student_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_applications_on_convocation_id" ON "applications" ("convocation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417054314"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUserDocuments (20180417060013)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "user_documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "student_id" integer, "document_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_13dfbbf76d"
+FOREIGN KEY ("student_id")
+  REFERENCES "students" ("id")
+, CONSTRAINT "fk_rails_9a2a0b4576"
+FOREIGN KEY ("document_id")
+  REFERENCES "documents" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_user_documents_on_student_id" ON "user_documents" ("student_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_user_documents_on_document_id" ON "user_documents" ("document_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417060013"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateApplicationDocuments (20180417063011)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "application_documents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "application_id" integer, "user_document_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_36ca51faa0"
+FOREIGN KEY ("application_id")
+  REFERENCES "applications" ("id")
+, CONSTRAINT "fk_rails_294a97436b"
+FOREIGN KEY ("user_document_id")
+  REFERENCES "user_documents" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_application_documents_on_application_id" ON "application_documents" ("application_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_application_documents_on_user_document_id" ON "application_documents" ("user_document_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417063011"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddDependenceRefToUser (20180417211501)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "dependence_id" integer[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_dependence_id" ON "users" ("dependence_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180417211501"]]
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProfiles (20180418095510)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "profiles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "description" varchar, "convocation_id" integer, CONSTRAINT "fk_rails_c7e34b0270"
+FOREIGN KEY ("convocation_id")
+  REFERENCES "convocations" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_profiles_on_convocation_id" ON "profiles" ("convocation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180418095510"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRequiredFiles (20180418095838)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "required_files" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "convocation_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_required_files_on_convocation_id" ON "required_files" ("convocation_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180418095838"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-04-18 14:12:26.315641"], ["updated_at", "2018-04-18 14:12:26.315641"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_email' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_admins_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_documents_on_user_document_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_documents_on_user_document_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_application_documents_on_application_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_applications_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_applications_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_applications_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocation_dependences_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocation_dependences_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocation_dependences_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_convocations_on_admin_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_convocations_on_admin_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_profiles_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_profiles_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_required_files_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_required_files_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_requirements_on_convocation_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_requirements_on_convocation_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_documents_on_document_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_documents_on_document_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_documents_on_student_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_dependence_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_dependence_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (14.6ms)[0m  [1m[32mINSERT INTO "dependences" ("name") VALUES (?)[0m  [["name", "Ingenieria"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "dependences" ("name") VALUES (?)[0m  [["name", "Ciencia"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Started POST "/admins" for 127.0.0.1 at 2018-04-18 09:13:47 -0500
+Processing by AdminsController#create as */*
+  Parameters: {"name"=>"julian", "lastname"=>"garzon", "email"=>"admin@test.com", "phone_ext"=>"1123", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dependence_id"=>"1", "permits"=>"creador"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "admins" ("name", "lastname", "permits", "phone_ext", "dependence_id", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "julian"], ["lastname", "garzon"], ["permits", "creador"], ["phone_ext", 1123], ["dependence_id", 1], ["created_at", "2018-04-18 14:13:47.727133"], ["updated_at", "2018-04-18 14:13:47.727133"], ["email", "admin@test.com"], ["encrypted_password", "$2a$11$u6g.z1Pk1Bv59OiW4s/UxeT1/Zuf/1SfPX6bOySQXJRsYogtmoNaq"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 236ms (Views: 1.2ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/admin_token" for 127.0.0.1 at 2018-04-18 09:13:52 -0500
+Processing by AdminTokenController#create as */*
+  Parameters: {"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}, "admin_token"=>{"auth"=>{"email"=>"admin@test.com", "password"=>"[FILTERED]"}}}
+  [1m[36mAdmin Load (10.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin@test.com"], ["LIMIT", 1]]
+Completed 201 Created in 275ms (Views: 0.5ms | ActiveRecord: 10.0ms)
+
+
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 09:14:06 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation_dependences_attributes"=>{"0"=>{"dependence_id"=>"1"}, "1"=>{"dependence_id"=>"2"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+Unpermitted parameter: :convocation
+Completed 500 Internal Server Error in 125ms (ActiveRecord: 4.7ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'convocation_dependences_attributes' for Convocation.):
+  
+app/controllers/convocations_controller.rb:28:in `create'
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 09:16:04 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation_dependences_attributes"=>{"0"=>{"dependence_id"=>"1"}, "1"=>{"dependence_id"=>"2"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+Unpermitted parameter: :convocation
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 6.9ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'convocation_dependences_attributes' for Convocation.):
+  
+app/controllers/convocations_controller.rb:28:in `create'
+  [1m[36mConvocation Load (2.8ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/convocations" for 127.0.0.1 at 2018-04-18 09:16:49 -0500
+Processing by ConvocationsController#create as */*
+  Parameters: {"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180", "requirements_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "profiles_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "activities_attributes"=>{"0"=>{"description"=>"primero"}, "1"=>{"description"=>"segundo"}, "2"=>{"description"=>"tercero"}}, "required_files_attributes"=>{"0"=>{"name"=>"cedula"}, "1"=>{"name"=>"papa"}, "2"=>{"name"=>"historia"}}, "convocation_dependences_attributes"=>{"0"=>{"dependence_id"=>"1"}, "1"=>{"dependence_id"=>"2"}}, "convocation"=>{"name"=>"programa peama", "description"=>"entregar subsidios", "level"=>"pregrado", "end_date"=>"2018-03-09", "vacants"=>"10", "hours_per_week"=>"20", "payout"=>"250000", "duration"=>"180"}}
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+Unpermitted parameter: :convocation
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.1ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "convocations" ("name", "description", "level", "end_date", "admin_id", "vacants", "hours_per_week", "payout", "duration", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "programa peama"], ["description", "entregar subsidios"], ["level", "pregrado"], ["end_date", "2018-03-09"], ["admin_id", 1], ["vacants", 10], ["hours_per_week", 20], ["payout", 250000.0], ["duration", 180], ["created_at", "2018-04-18 14:16:49.974554"], ["updated_at", "2018-04-18 14:16:49.974554"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "convocation_dependences" ("convocation_id", "dependence_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["convocation_id", 1], ["dependence_id", 1], ["created_at", "2018-04-18 14:16:49.977115"], ["updated_at", "2018-04-18 14:16:49.977115"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "convocation_dependences" ("convocation_id", "dependence_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["convocation_id", 1], ["dependence_id", 2], ["created_at", "2018-04-18 14:16:49.979564"], ["updated_at", "2018-04-18 14:16:49.979564"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "requirements" ("convocation_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["convocation_id", 1], ["description", "primero"], ["created_at", "2018-04-18 14:16:49.981726"], ["updated_at", "2018-04-18 14:16:49.981726"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "requirements" ("convocation_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["convocation_id", 1], ["description", "segundo"], ["created_at", "2018-04-18 14:16:49.983294"], ["updated_at", "2018-04-18 14:16:49.983294"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "requirements" ("convocation_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["convocation_id", 1], ["description", "tercero"], ["created_at", "2018-04-18 14:16:49.984897"], ["updated_at", "2018-04-18 14:16:49.984897"]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "activities" ("convocation_id", "description") VALUES (?, ?)[0m  [["convocation_id", 1], ["description", "primero"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "activities" ("convocation_id", "description") VALUES (?, ?)[0m  [["convocation_id", 1], ["description", "segundo"]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "activities" ("convocation_id", "description") VALUES (?, ?)[0m  [["convocation_id", 1], ["description", "tercero"]]
+  [1m[35mSQL (6.3ms)[0m  [1m[32mINSERT INTO "required_files" ("name", "convocation_id") VALUES (?, ?)[0m  [["name", "cedula"], ["convocation_id", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "required_files" ("name", "convocation_id") VALUES (?, ?)[0m  [["name", "papa"], ["convocation_id", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "required_files" ("name", "convocation_id") VALUES (?, ?)[0m  [["name", "historia"], ["convocation_id", 1]]
+  [1m[35mSQL (7.9ms)[0m  [1m[32mINSERT INTO "profiles" ("description", "convocation_id") VALUES (?, ?)[0m  [["description", "primero"], ["convocation_id", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "profiles" ("description", "convocation_id") VALUES (?, ?)[0m  [["description", "segundo"], ["convocation_id", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "profiles" ("description", "convocation_id") VALUES (?, ?)[0m  [["description", "tercero"], ["convocation_id", 1]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 203ms (Views: 2.3ms | ActiveRecord: 27.2ms)
+
+
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mConvocation Load (0.4ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDependence Load (0.4ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRequirement Load (0.2ms)[0m  [1m[34mSELECT  "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mRequiredFile Load (0.2ms)[0m  [1m[34mSELECT  "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.2ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mConvocation Load (0.8ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mConvocation Load (0.3ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" ORDER BY "convocations"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ? LIMIT ?[0m  [["convocation_id", 1], ["LIMIT", 11]]

@@ -1,6 +1,7 @@
 class ConvocationsController < ApplicationController
   before_action :authenticate_user, only: [:search]
-  
+  before_action :authenticate_admin, only: [:create]
+
   before_action :set_convocation, only: [:show, :update, :destroy]
 
   # GET /convocations
@@ -17,7 +18,14 @@ class ConvocationsController < ApplicationController
 
   # POST /convocations
   def create
-    @convocation = Convocation.new(convocation_params)
+    puts 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+    puts current_admin.as_json
+    puts 'ssssssssssssssssssssssssssssssssss'
+    #return
+    self_params = convocation_params.as_json
+    self_params[:admin_id] = current_admin.id
+    convocation_params[:admin_id] = current_admin.id
+    @convocation = Convocation.new(self_params)
 
     if @convocation.save
       render json: @convocation, status: :created, location: @convocation
@@ -66,6 +74,10 @@ class ConvocationsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def convocation_params
-      params.require(:convocation).permit(:name, :description, :type_student, :end_date, :admin_id, :vacants, :hours_per_week, :payout, :duration)
+      #params.permit(:name, :description, :level, :end_date, :vacants, :hours_per_week, :payout, :duration,:requirements => [],:dependences => [],:profiles => [],:activities => [],:required_files => [])
+      params.permit(:name, :description, :level, :end_date, :vacants, :hours_per_week, :payout, :duration,
+        {:requirements_attributes=> [:description]},{:profiles_attributes=> [:description]},{:activities_attributes=> [:description]},
+          {:required_files_attributes=> [:name]},{:convocation_dependences_attributes=> [:dependence_id]})
+
     end
 end

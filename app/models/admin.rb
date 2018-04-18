@@ -8,6 +8,11 @@ class Admin < ApplicationRecord
   #validates :password, confirmation: true
 
   belongs_to :dependence
+  alias_method :authenticate, :valid_password?
+
+  def self.from_taken_payload(payload)
+      self.find payload["sub"]
+  end
 
   def populate
     out_object = {}
