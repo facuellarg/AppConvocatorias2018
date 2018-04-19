@@ -7161,3 +7161,322 @@ puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
 puma (3.11.3) lib/puma/server.rb:438:in `process_client'
 puma (3.11.3) lib/puma/server.rb:302:in `block in run'
 puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "//dependences" for 168.176.241.76 at 2018-04-19 23:20:59 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DependencesController#index as JSON
+  Parameters: {"dependence"=>{}}
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences"[0m
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 1.5ms)
+
+
+Started POST "//user_token" for 168.176.241.76 at 2018-04-19 23:21:08 +0000
+Processing by UserTokenController#create as JSON
+  Parameters: {"auth"=>{"email"=>"facuellarg@unal.edu.co", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"facuellarg@unal.edu.co", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "facuellarg@unal.edu.co"], ["LIMIT", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 1.2ms)
+
+
+Started POST "//user_token" for 168.176.241.76 at 2018-04-19 23:21:10 +0000
+Processing by UserTokenController#create as JSON
+  Parameters: {"auth"=>{"email"=>"facuellarg@unal.edu.co", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"facuellarg@unal.edu.co", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "facuellarg@unal.edu.co"], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "//dependences" for 168.176.241.76 at 2018-04-19 23:21:12 +0000
+Processing by DependencesController#index as JSON
+  Parameters: {"dependence"=>{}}
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users" for 168.176.241.76 at 2018-04-19 23:21:46 +0000
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Freddy", "lastname"=>"Cuellar", "email"=>"facuellarg@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dependence_id"=>"Ingenieria", "user"=>{"name"=>"Freddy", "lastname"=>"Cuellar", "email"=>"facuellarg@unal.edu.co", "dependence_id"=>"Ingenieria"}}
+Unpermitted parameter: :user
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "facuellarg@unal.edu.co"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 220ms (Views: 0.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "//dependences" for 168.176.241.77 at 2018-04-19 23:27:59 +0000
+Processing by DependencesController#index as JSON
+  Parameters: {"dependence"=>{}}
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences"[0m
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//dependences" for 168.176.241.77 at 2018-04-19 23:28:52 +0000
+Processing by DependencesController#index as JSON
+  Parameters: {"dependence"=>{}}
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences"[0m
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users" for 168.176.241.77 at 2018-04-19 23:29:10 +0000
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"freddy", "lastname"=>"Cuellar", "email"=>"Facuellarg@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "level"=>"pregrado", "dependence_id"=>"Ingenieria", "user"=>{"name"=>"freddy", "lastname"=>"Cuellar", "level"=>"pregrado", "email"=>"Facuellarg@unal.edu.co", "dependence_id"=>"Ingenieria"}}
+Unpermitted parameters: :level, :user
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "facuellarg@unal.edu.co"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.1ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 153ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "//users" for 168.176.241.77 at 2018-04-19 23:29:21 +0000
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"freddy", "lastname"=>"Cuellar", "email"=>"Facuellarg@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "level"=>"postgrado", "dependence_id"=>"Ciencia", "user"=>{"name"=>"freddy", "lastname"=>"Cuellar", "level"=>"postgrado", "email"=>"Facuellarg@unal.edu.co", "dependence_id"=>"Ciencia"}}
+Unpermitted parameters: :level, :user
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "facuellarg@unal.edu.co"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 143ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mDependence Load (2.5ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "//users" for 168.176.241.77 at 2018-04-19 23:30:47 +0000
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 168.176.241.77 at 2018-04-19 23:30:50 +0000
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/users?indent=2" for 168.176.241.77 at 2018-04-19 23:32:36 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"pasword"=>"contraseña", "password_confirmation"=>"[FILTERED]", "email"=>"facuellarg@unal.edu.co", "name"=>"Freddy Alejandro  ", "lastname"=>"Cuellar Garcia", "level"=>"pregrado", "dependence_id"=>1, "indent"=>"2", "user"=>{"name"=>"Freddy Alejandro  ", "lastname"=>"Cuellar Garcia", "level"=>"pregrado", "email"=>"facuellarg@unal.edu.co", "dependence_id"=>1}}
+Unpermitted parameters: :pasword, :level, :indent, :user
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "facuellarg@unal.edu.co"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 9ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 181.49.74.69 at 2018-04-19 23:34:35 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.3.4/gems/railties-5.1.6/lib/rails/templates/rails/welcome/index.html.erb (3.8ms)
+Completed 200 OK in 17ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 181.49.74.69 at 2018-04-19 23:35:05 +0000
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"julian", "lastname"=>"garzon", "email"=>"user2@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dependence_id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user2@test.com"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 138ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 181.49.74.69 at 2018-04-19 23:35:24 +0000
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"julian", "lastname"=>"garzon", "email"=>"user2@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dependence_id"=>"1", "level"=>"pregrado"}
+Unpermitted parameter: :level
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user2@test.com"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.1ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 139ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//dependences" for 168.176.241.77 at 2018-04-19 23:36:12 +0000
+Processing by DependencesController#index as JSON
+  Parameters: {"dependence"=>{}}
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences"[0m
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users" for 181.49.74.69 at 2018-04-19 23:36:14 +0000
+Processing by UsersController#create as */*
+  Parameters: {"name"=>"julian", "lastname"=>"garzon", "email"=>"user2@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dependence_id"=>"1", "level"=>"pregrado"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "user2@test.com"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "lastname", "level", "created_at", "updated_at", "email", "encrypted_password", "dependence_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "julian"], ["lastname", "garzon"], ["level", "pregrado"], ["created_at", "2018-04-19 23:36:14.682701"], ["updated_at", "2018-04-19 23:36:14.682701"], ["email", "user2@test.com"], ["encrypted_password", "$2a$11$Wa7.LNuUxNNuAVIhcuBrUO4lZzbahhDT8a9AshgnEIoGbb4kwIiWu"], ["dependence_id", 1]]
+  [1m[35m (12.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 189ms (Views: 2.5ms | ActiveRecord: 15.0ms)
+
+
+Started POST "//users" for 168.176.241.77 at 2018-04-19 23:36:34 +0000
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"Freddy", "lastname"=>"Cuellar", "email"=>"facuellarg@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "level"=>"pregrado", "dependence_id"=>"Ingenieria", "user"=>{"name"=>"Freddy", "lastname"=>"Cuellar", "level"=>"pregrado", "email"=>"facuellarg@unal.edu.co", "dependence_id"=>"Ingenieria"}}
+Unpermitted parameter: :user
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "facuellarg@unal.edu.co"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.1ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Completed 422 Unprocessable Entity in 144ms (Views: 0.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "//dependences" for 168.176.241.77 at 2018-04-19 23:37:06 +0000
+Processing by DependencesController#index as JSON
+  Parameters: {"dependence"=>{}}
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//users" for 168.176.241.77 at 2018-04-19 23:37:31 +0000
+Processing by UsersController#create as JSON
+  Parameters: {"name"=>"freddy", "lastname"=>"cuellar", "email"=>"facuellarg@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "level"=>"pregrado", "dependence_id"=>"1", "user"=>{"name"=>"freddy", "lastname"=>"cuellar", "level"=>"pregrado", "email"=>"facuellarg@unal.edu.co", "dependence_id"=>"1"}}
+Unpermitted parameter: :user
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "facuellarg@unal.edu.co"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.1ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "lastname", "level", "created_at", "updated_at", "email", "encrypted_password", "dependence_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "freddy"], ["lastname", "cuellar"], ["level", "pregrado"], ["created_at", "2018-04-19 23:37:31.703035"], ["updated_at", "2018-04-19 23:37:31.703035"], ["email", "facuellarg@unal.edu.co"], ["encrypted_password", "$2a$11$bdQEbitKzw94ztCVKvy2deK60t8xlWrsFy0cy.XMhNEZWuNwoEqvq"], ["dependence_id", 1]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 169ms (Views: 0.8ms | ActiveRecord: 13.8ms)
+
+
+Started POST "/admin" for 181.49.74.69 at 2018-04-19 23:38:12 +0000
+  
+ActionController::RoutingError (No route matches [POST] "/admin"):
+  
+actionpack (5.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.6) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.6) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.3) lib/puma/configuration.rb:225:in `call'
+puma (3.11.3) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.3) lib/puma/server.rb:438:in `process_client'
+puma (3.11.3) lib/puma/server.rb:302:in `block in run'
+puma (3.11.3) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/admins" for 181.49.74.69 at 2018-04-19 23:38:17 +0000
+Processing by AdminsController#create as */*
+  Parameters: {"name"=>"julian", "lastname"=>"garzon", "email"=>"admin2@test.com", "phone_ext"=>"1123", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "dependence_id"=>"1", "permits"=>"admin"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mAdmin Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "admins" WHERE "admins"."email" = ? LIMIT ?[0m  [["email", "admin2@test.com"], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.1ms)[0m  [1m[34mSELECT  "dependences".* FROM "dependences" WHERE "dependences"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "admins" ("name", "lastname", "permits", "phone_ext", "dependence_id", "created_at", "updated_at", "email", "encrypted_password") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "julian"], ["lastname", "garzon"], ["permits", "admin"], ["phone_ext", 1123], ["dependence_id", 1], ["created_at", "2018-04-19 23:38:17.974183"], ["updated_at", "2018-04-19 23:38:17.974183"], ["email", "admin2@test.com"], ["encrypted_password", "$2a$11$LGOKx7syZjnW5jEzL6Q2Pu9ySji6/w1kw.uWcGX2L6oVyW8L3j7MK"]]
+  [1m[35m (10.6ms)[0m  [1m[36mcommit transaction[0m
+Completed 201 Created in 201ms (Views: 1.8ms | ActiveRecord: 13.8ms)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "//user_token" for 168.176.241.77 at 2018-04-19 23:40:02 +0000
+Processing by UserTokenController#create as JSON
+  Parameters: {"auth"=>{"email"=>"facuellarg@unal.edu.co", "password"=>"[FILTERED]"}, "user_token"=>{"auth"=>{"email"=>"facuellarg@unal.edu.co", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "facuellarg@unal.edu.co"], ["LIMIT", 1]]
+Completed 201 Created in 169ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users" for 168.176.241.77 at 2018-04-19 23:40:02 +0000
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "//dependences" for 168.176.241.77 at 2018-04-19 23:40:02 +0000
+Processing by DependencesController#index as JSON
+  Parameters: {"dependence"=>{}}
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences"[0m
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users" for 168.176.241.77 at 2018-04-19 23:40:06 +0000
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users" for 168.176.241.77 at 2018-04-19 23:40:06 +0000
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//dependences" for 168.176.241.77 at 2018-04-19 23:40:06 +0000
+Processing by DependencesController#index as JSON
+  Parameters: {"dependence"=>{}}
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences"[0m
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "//search_convocations" for 168.176.241.77 at 2018-04-19 23:40:38 +0000
+Processing by ConvocationsController#search as JSON
+  Parameters: {"page"=>1, "convocation"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MIN("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MIN("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MIN("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT MAX("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[36mConvocation Load (0.5ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN (1) AND convocations.payout BETWEEN (250000.0) AND (250000.0) AND convocations.duration BETWEEN (180) AND (180) AND convocations.hours_per_week BETWEEN (20) AND (20)) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 1.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "//users" for 168.176.241.77 at 2018-04-19 23:41:38 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as JSON
+  Parameters: {"user"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 1.1ms | ActiveRecord: 1.7ms)
+
+
+Started POST "//search_convocations" for 168.176.241.77 at 2018-04-19 23:41:38 +0000
+Processing by ConvocationsController#search as JSON
+  Parameters: {"page"=>1, "convocation"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Unpermitted parameter: :convocation
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MIN("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("convocations"."payout") FROM "convocations"[0m
+Started POST "//search_convocations" for 168.176.241.77 at 2018-04-19 23:41:38 +0000
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MIN("convocations"."duration") FROM "convocations"[0m
+Processing by ConvocationsController#search as JSON
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("convocations"."duration") FROM "convocations"[0m
+  Parameters: {"page"=>1, "convocation"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MIN("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("convocations"."hours_per_week") FROM "convocations"[0m
+Unpermitted parameter: :convocation
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MIN("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MIN("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MIN("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[36mConvocation Load (0.4ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN (1) AND convocations.payout BETWEEN (250000.0) AND (250000.0) AND convocations.duration BETWEEN (180) AND (180) AND convocations.hours_per_week BETWEEN (20) AND (20)) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mConvocation Load (0.4ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN (1) AND convocations.payout BETWEEN (250000.0) AND (250000.0) AND convocations.duration BETWEEN (180) AND (180) AND convocations.hours_per_week BETWEEN (20) AND (20)) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 96ms (Views: 0.8ms | ActiveRecord: 4.5ms)
+
+
+Completed 200 OK in 85ms (Views: 0.6ms | ActiveRecord: 3.0ms)
+
+
