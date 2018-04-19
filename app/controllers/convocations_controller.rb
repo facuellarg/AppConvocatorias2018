@@ -51,13 +51,11 @@ class ConvocationsController < ApplicationController
     aux_array = []
     self_params = search_params
     out_object = {}
-    if self_params[:dependence]
-      aux_array.push(self_params[:dependence])
-    else
-      aux_array.push(current_user.dependence_id)
-    end
+  
+    aux_array.push(self_params[:dependence] || current_user.dependence_id)
+
     self_params[:dependences] = aux_array
-    out_object[:pages] = (Convocation.count / 10).floor
+    out_object[:pages] = (Convocation.count / 10.0).ceil
     out_object[:convocations] = Convocation.search(self_params).paginate(:page => self_params[:page] || 1,:per_page => 10).map{ |x| x.populate }
   
     render json: out_object

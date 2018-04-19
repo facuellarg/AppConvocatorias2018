@@ -72,7 +72,6 @@ ActiveRecord::Schema.define(version: 20180418095838) do
   create_table "convocations", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "type_student"
     t.string "level"
     t.date "end_date"
     t.integer "admin_id"
@@ -118,12 +117,12 @@ ActiveRecord::Schema.define(version: 20180418095838) do
   end
 
   create_table "user_documents", force: :cascade do |t|
-    t.integer "student_id"
+    t.integer "user_id"
     t.integer "document_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["document_id"], name: "index_user_documents_on_document_id"
-    t.index ["student_id"], name: "index_user_documents_on_student_id"
+    t.index ["user_id"], name: "index_user_documents_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

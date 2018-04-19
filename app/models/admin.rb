@@ -18,7 +18,7 @@ class Admin < ApplicationRecord
     out_object = {}
     out_object[:name] = self.name
     out_object[:lastname] = self.lastname
-    out_object[:phone] = self.phone
+    out_object[:phone_ext] = self.phone_ext
 
     return out_object 
   end

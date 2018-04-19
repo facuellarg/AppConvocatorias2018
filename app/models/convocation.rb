@@ -29,5 +29,6 @@ class Convocation < ApplicationRecord
   def populate
     out_object = self.as_json
     out_object[:admin] = self.admin.populate
+    return out_object
   end
 end
