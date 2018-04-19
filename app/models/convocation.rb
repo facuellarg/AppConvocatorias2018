@@ -28,7 +28,13 @@ class Convocation < ApplicationRecord
 
   def populate
     out_object = self.as_json
+    out_object[:dependences] = self.dependences.as_json
+    out_object[:requirements] = self.requirements.as_json
+    out_object[:required_files] = self.required_files.as_json
+    out_object[:profiles] = self.profiles.as_json
+    out_object[:activities] = self.activities.as_json
     out_object[:admin] = self.admin.populate
+
     return out_object
   end
 end

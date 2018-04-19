@@ -52,3 +52,5 @@ gem 'will_paginate', '~> 3.1.0'
 
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
+
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
