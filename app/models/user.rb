@@ -9,7 +9,9 @@ class User < ApplicationRecord
 
   belongs_to :dependence
 
-  validates :name,:lastname,:email,:password,:password_confirmation,:dependence, presence: true
+  validates :name,:lastname,:email,:dependence, :level, presence: true
+  validates :password,:password_confirmation, presence: true,  on: :create
+
   validates :password, confirmation: true
 
   
