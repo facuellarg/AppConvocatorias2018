@@ -181,7 +181,7 @@ DEPENDENCIES
   sqlite3
   tzinfo-data
   wicked_pdf
-  will_paginate (~> 3.1.0)
+  will_paginate
   wkhtmltopdf-binary
 
 BUNDLED WITH

@@ -48,16 +48,17 @@ class ConvocationsController < ApplicationController
   end
 
   def search
-    aux_array = []
+    #aux_array = []
     self_params = search_params
     out_object = {}
   
-    aux_array.push(self_params[:dependence] || current_user.dependence_id)
-
-    self_params[:dependences] = aux_array
-    out_object[:pages] = (Convocation.count / 10.0).ceil
-    out_object[:convocations] = Convocation.search(self_params).paginate(:page => self_params[:page] || 1,:per_page => 10).map{ |x| x.populate }
-  
+    #aux_array.push(self_params[:dependence] || current_user.dependence_id)
+ 
+    #self_params[:dependences] = aux_array
+    search_convocatories = Convocation.search(self_params)
+    out_object[:convocations] = search_convocatories.paginate(:page => self_params[:page],:per_page => 10).map{ |x| x.populate }
+    out_object[:pages] = (search_convocatories.count / 10.0).ceil
+    
     render json: out_object
   end
   # DELETE /convocations/1

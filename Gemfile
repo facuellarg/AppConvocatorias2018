@@ -48,7 +48,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rack-cors', :require => 'rack/cors'
 
-gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate'
 
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'

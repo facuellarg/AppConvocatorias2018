@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-Dependence.create(name: "Ingenieria")
-Dependence.create(name: "Ciencia")
+#Dependence.create(name: "Ingenieria")
+#Dependence.create(name: "Ciencia")
 levels = ["pregrado","postgrado"]
 
 
@@ -46,3 +46,9 @@ levels = ["pregrado","postgrado"]
     end
    
 end
+
+
+#Convocation.joins(:dependences).where("convocations.level = (?) AND dependences.id IN (?) AND convocations.payout BETWEEN (?) AND (?) AND convocations.duration BETWEEN (?) AND (?) AND convocations.hours_per_week BETWEEN (?) AND (?)","postgrado",Dependence.all.pluck(:id),Convocation.minimum(:payout),Convocation.maximum(:payout),Convocation.minimum(:duration),Convocation.maximum(:duration),Convocation.minimum(:hours_per_week),Convocation.maximum(:hours_per_week)).order(created_at: :desc).distinct
+    
+Convocation.joins(:dependences).where("convocations.level = (?) AND dependences.id IN (?) AND convocations.payout BETWEEN (?) AND (?) AND convocations.duration BETWEEN (?) AND (?) AND convocations.hours_per_week BETWEEN (?) AND (?)","postgrado",[1],Convocation.minimum(:payout),Convocation.maximum(:payout),Convocation.minimum(:duration),Convocation.maximum(:duration),Convocation.minimum(:hours_per_week),Convocation.maximum(:hours_per_week)).order(created_at: :desc).distinct
+  
