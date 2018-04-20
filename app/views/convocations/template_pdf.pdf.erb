@@ -1,1 +1,120 @@
-<h1>Ejemplo</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>PDF</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<head>
+  		<meta charset="UTF-8">
+	</head>
+</head>
+
+<body>
+   
+   <h2 class="text-center"><%= @convocation.name %></h2>
+   <p><strong>Descripcion:</strong></p>
+  <p><%= @convocation.description %></p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Parametro</th>
+        <th>valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Estudiantes de:</td>
+        <td><%= @convocation.level %></td>
+      </tr>
+      <tr>
+        <td>Fecha cierre</td>
+        <td><%= @convocation.end_date %></td>
+      </tr>
+      <tr>
+        <td>Vacantes</td>
+        <td><%= @convocation.vacants %></td>
+      </tr>
+      <tr>
+        <td>Horas por Semana</td>
+        <td><%= @convocation.hours_per_week %></td>
+      </tr>
+      <tr>
+        <td>Estimulo Economico</td>
+        <td><%= @convocation.payout %></td>
+      </tr>
+      <tr>
+        <td>Duracion en Dias</td>
+        <td><%= @convocation.duration %></td>
+      </tr>
+      <tr>
+        <td>Creada en:</td>
+        <td><%= @convocation.created_at %></td>
+      </tr>
+    </tbody>
+  </table>
+  <p><strong>Detalles Adicionales</strong></p>
+  <% if not @convocation.dependences.blank? %>
+      <div class="panel panel-default col-md-6">
+          <div class="panel-heading">Facultades</div>
+          <div class="panel-body">
+              <% @convocation.dependences.each do |dep| %>
+                  <p><%= dep.name %></p>
+              <% end %>
+          </div>
+      </div>
+  <% end %>
+  
+  <% if not @convocation.requirements.blank? %>
+      <div class="panel panel-default col-md-6">
+          <div class="panel-heading">Requerimientos</div>
+          <div class="panel-body">
+              <% @convocation.requirements.each do |dep| %>
+                  <p><%= dep.description %></p>
+              <% end %>
+          </div>
+      </div>
+  <% end %>
+  
+  <% if not @convocation.required_files.blank? %>
+      <div class="panel panel-default col-md-6">
+          <div class="panel-heading">Archivos Requeridos</div>
+          <div class="panel-body">
+              <% @convocation.required_files.each do |dep| %>
+                  <p><%= dep.name %></p>
+              <% end %>
+          </div>
+      </div>
+  <% end %>
+  
+  <% if not @convocation.profiles.blank? %>
+      <div class="panel panel-default col-md-6">
+          <div class="panel-heading">Perfil</div>
+          <div class="panel-body">
+              <% @convocation.profiles.each do |dep| %>
+                  <p><%= dep.description %></p>
+              <% end %>
+          </div>
+      </div>
+  <% end %>
+  
+   <% if not @convocation.activities.blank? %>
+       <div class="panel panel-default col-md-6">
+          <div class="panel-heading">Actividades</div>
+          <div class="panel-body">
+              <% @convocation.activities.each do |dep| %>
+                  <p><%= dep.description %></p>
+              <% end %>
+          </div>
+      </div>
+  <% end %>
+  
+  <div class="panel panel-default">
+      <div class="panel-heading">Panel Heading</div>
+      <div class="panel-body">Panel Content</div>
+  </div>
+   
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</body>
+</html>

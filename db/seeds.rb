@@ -7,8 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-#Dependence.create(name: "Ingenieria")
-#Dependence.create(name: "Ciencia")
+Dependence.create(name: "Ingenieria")
+Dependence.create(name: "Ciencia")
+
+Admin.create(name: "Julian",lastname: "Garzon",email:"admin@test.com",phone_ext:"1123",password:"123456",password_confirmation:"123456",dependence_id:1,permits:"profesor")
 levels = ["pregrado","postgrado"]
 
 
