@@ -5,8 +5,44 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-#require 'faker'
+require 'faker'
 
 Dependence.create(name: "Ingenieria")
 Dependence.create(name: "Ciencia")
+levels = ["pregrado","postgrado"]
 
+
+50.times do 
+    requirements = []
+    required_files = []
+    profiles = []
+    activities = []
+
+    con = Convocation.new
+    con.name = Faker::Educator.course
+    con.description = Faker::Dune.quote
+    con.level = levels[rand(0..1)]
+    con.end_date = Faker::Date.forward(rand(1..60))
+    con.admin_id = 1
+    con.vacants = rand(1..15)
+    con.hours_per_week = rand(5..30)
+    con.payout = rand(300000..800000)
+    con.duration = rand(15..180)
+    con.dependences << Dependence.find(rand(1..2))
+    
+    if con.save 
+        rand(1..3).times do
+            requirements.push(Requirement.create(description: Faker::FamilyGuy.quote,convocation_id: con.id))
+            required_files.push(RequiredFile.create(name: Faker::Company.buzzword,convocation_id: con.id))
+            profiles.push(Profile.create(description: Faker::Company.profession, convocation_id: con.id))
+            activities.push(Activity.create(description: Faker::Company.catch_phrase, convocation_id: con.id))
+        end
+        con.requirements = requirements
+        con.required_files = required_files
+        con.profiles = profiles
+        con.activities = activities
+        
+        con.save
+    end
+   
+end
