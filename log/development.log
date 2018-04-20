@@ -9613,3 +9613,406 @@ Processing by ConvocationsController#search as */*
 Completed 200 OK in 685ms (Views: 6.4ms | ActiveRecord: 45.0ms)
 
 
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-19 20:36:12 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ConvocationsController#search as */*
+  [1m[36mUser Load (19.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[35m (11.3ms)[0m  [1m[34mSELECT MIN("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT MAX("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MIN("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MIN("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[36mConvocation Load (1.4ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN (1) AND convocations.payout BETWEEN (301209.0) AND (790887.0) AND convocations.duration BETWEEN (19) AND (176) AND convocations.hours_per_week BETWEEN (5) AND (30)) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mDependence Load (0.6ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mRequirement Load (0.7ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mRequiredFile Load (0.5ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mActivity Load (1.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mAdmin Load (0.8ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mRequirement Load (0.2ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mRequiredFile Load (0.2ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.1ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mRequirement Load (0.1ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mRequiredFile Load (0.1ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mRequirement Load (0.2ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mRequiredFile Load (0.1ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mRequirement Load (0.2ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mRequiredFile Load (0.1ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (1.1ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mRequiredFile Load (0.1ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mActivity Load (0.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.1ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mRequirement Load (0.1ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mRequiredFile Load (0.2ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mRequirement Load (0.4ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mRequiredFile Load (0.1ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.1ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mRequirement Load (0.1ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mRequiredFile Load (0.1ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mActivity Load (1.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mRequirement Load (0.4ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mRequiredFile Load (0.2ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 753ms (Views: 14.7ms | ActiveRecord: 59.3ms)
+
+
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-19 20:36:18 -0500
+Processing by ConvocationsController#search as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MIN("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MIN("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MIN("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[36mConvocation Load (0.8ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN (1) AND convocations.payout BETWEEN (301209.0) AND (790887.0) AND convocations.duration BETWEEN (19) AND (176) AND convocations.hours_per_week BETWEEN (5) AND (30)) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mRequirement Load (0.4ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.4ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mRequirement Load (0.4ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mRequirement Load (0.2ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mRequiredFile Load (0.4ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mRequiredFile Load (0.2ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mRequirement Load (0.4ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mRequiredFile Load (0.4ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 262ms (Views: 53.4ms | ActiveRecord: 19.6ms)
+
+
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-19 20:36:23 -0500
+Processing by ConvocationsController#search as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MIN("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MIN("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MIN("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[36mConvocation Load (0.5ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN (1) AND convocations.payout BETWEEN (301209.0) AND (790887.0) AND convocations.duration BETWEEN (19) AND (176) AND convocations.hours_per_week BETWEEN (5) AND (30)) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mAdmin Load (0.4ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mCACHE Admin Load (0.1ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.9ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mRequirement Load (0.4ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.4ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mActivity Load (2.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mProfile Load (4.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mRequirement Load (0.2ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.5ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 199ms (Views: 12.5ms | ActiveRecord: 25.6ms)
+
+
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-19 20:36:46 -0500
+Processing by ConvocationsController#search as */*
+  Parameters: {"page"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MIN("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MIN("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT MIN("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[36mConvocation Load (5.1ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN (1) AND convocations.payout BETWEEN (301209.0) AND (790887.0) AND convocations.duration BETWEEN (19) AND (176) AND convocations.hours_per_week BETWEEN (5) AND (30)) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 40]]
+Completed 200 OK in 24ms (Views: 0.8ms | ActiveRecord: 9.3ms)
+
+
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-19 20:36:51 -0500
+Processing by ConvocationsController#search as */*
+  Parameters: {"page"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MIN("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MIN("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MIN("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MAX("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[36mConvocation Load (0.6ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN (1) AND convocations.payout BETWEEN (301209.0) AND (790887.0) AND convocations.duration BETWEEN (19) AND (176) AND convocations.hours_per_week BETWEEN (5) AND (30)) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mRequirement Load (0.2ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mRequiredFile Load (0.2ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 51]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mRequirement Load (0.2ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 47]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mRequirement Load (0.4ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 46]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mRequirement Load (1.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mRequiredFile Load (0.7ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 41]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mProfile Load (8.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 38]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.4ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mRequiredFile Load (0.2ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mActivity Load (1.1ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 37]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mProfile Load (0.5ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 35]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.2ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mRequiredFile Load (0.4ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 34]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mRequirement Load (0.7ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mRequiredFile Load (0.2ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 33]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mRequirement Load (0.8ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mRequiredFile Load (3.8ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 30]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 251ms (Views: 39.7ms | ActiveRecord: 33.4ms)
+
+
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-19 20:36:55 -0500
+Processing by ConvocationsController#search as */*
+  Parameters: {"page"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT MIN("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MIN("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MIN("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[36mConvocation Load (1.6ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN (1) AND convocations.payout BETWEEN (301209.0) AND (790887.0) AND convocations.duration BETWEEN (19) AND (176) AND convocations.hours_per_week BETWEEN (5) AND (30)) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 10]]
+  [1m[36mDependence Load (0.5ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 27]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 27]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 27]]
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 27]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 27]]
+  [1m[36mAdmin Load (0.6ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 26]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 26]]
+  [1m[36mRequiredFile Load (0.4ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 26]]
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 26]]
+  [1m[36mActivity Load (1.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 26]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 25]]
+  [1m[36mRequirement Load (1.5ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 25]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 25]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 25]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 25]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 24]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 24]]
+  [1m[36mRequiredFile Load (0.4ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 24]]
+  [1m[36mProfile Load (0.4ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 24]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 24]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 22]]
+  [1m[36mRequirement Load (0.6ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 22]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 22]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 22]]
+  [1m[36mActivity Load (0.9ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 22]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.5ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 21]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 21]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 21]]
+  [1m[36mProfile Load (0.6ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 21]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 21]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 16]]
+  [1m[36mRequirement Load (0.4ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 16]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 16]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 16]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 16]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.5ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 6]]
+  [1m[36mRequirement Load (7.4ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 6]]
+  [1m[36mRequiredFile Load (0.4ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 6]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 6]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 6]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 4]]
+  [1m[36mRequirement Load (0.3ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 4]]
+  [1m[36mRequiredFile Load (0.3ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 4]]
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 4]]
+  [1m[36mActivity Load (0.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 4]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mDependence Load (0.3ms)[0m  [1m[34mSELECT "dependences".* FROM "dependences" INNER JOIN "convocation_dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE "convocation_dependences"."convocation_id" = ?[0m  [["convocation_id", 2]]
+  [1m[36mRequirement Load (0.2ms)[0m  [1m[34mSELECT "requirements".* FROM "requirements" WHERE "requirements"."convocation_id" = ?[0m  [["convocation_id", 2]]
+  [1m[36mRequiredFile Load (0.2ms)[0m  [1m[34mSELECT "required_files".* FROM "required_files" WHERE "required_files"."convocation_id" = ?[0m  [["convocation_id", 2]]
+  [1m[36mProfile Load (0.3ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."convocation_id" = ?[0m  [["convocation_id", 2]]
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."convocation_id" = ?[0m  [["convocation_id", 2]]
+  [1m[36mCACHE Admin Load (0.0ms)[0m  [1m[34mSELECT  "admins".* FROM "admins" WHERE "admins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 271ms (Views: 10.3ms | ActiveRecord: 31.3ms)
+
+
+Started POST "/search_convocations" for 127.0.0.1 at 2018-04-19 20:36:59 -0500
+Processing by ConvocationsController#search as */*
+  Parameters: {"page"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MIN("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("convocations"."payout") FROM "convocations"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT MIN("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT MAX("convocations"."duration") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MIN("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT MAX("convocations"."hours_per_week") FROM "convocations"[0m
+  [1m[36mConvocation Load (0.6ms)[0m  [1m[34mSELECT  "convocations".* FROM "convocations" INNER JOIN "convocation_dependences" ON "convocation_dependences"."convocation_id" = "convocations"."id" INNER JOIN "dependences" ON "dependences"."id" = "convocation_dependences"."dependence_id" WHERE (convocations.level = ('pregrado') AND dependences.id IN (1) AND convocations.payout BETWEEN (301209.0) AND (790887.0) AND convocations.duration BETWEEN (19) AND (176) AND convocations.hours_per_week BETWEEN (5) AND (30)) ORDER BY "convocations"."created_at" DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 10], ["OFFSET", 20]]
+Completed 200 OK in 14ms (Views: 0.3ms | ActiveRecord: 3.6ms)
+
+
