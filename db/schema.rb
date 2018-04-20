@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180418095838) do
+ActiveRecord::Schema.define(version: 20180420015221) do
 
   create_table "activities", force: :cascade do |t|
     t.integer "convocation_id"
@@ -94,6 +94,7 @@ ActiveRecord::Schema.define(version: 20180418095838) do
     t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "file"
   end
 
   create_table "profiles", force: :cascade do |t|

@@ -30,7 +30,7 @@ levels = ["pregrado","postgrado"]
     con.duration = rand(15..180)
     con.dependences << Dependence.find(rand(1..2))
     
-    if con.save 
+    if con.save! 
         rand(1..3).times do
             requirements.push(Requirement.create(description: Faker::FamilyGuy.quote,convocation_id: con.id))
             required_files.push(RequiredFile.create(name: Faker::Company.buzzword,convocation_id: con.id))
@@ -42,7 +42,7 @@ levels = ["pregrado","postgrado"]
         con.profiles = profiles
         con.activities = activities
         
-        con.save
+        con.save!
     end
    
 end
