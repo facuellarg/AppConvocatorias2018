@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :documents
   post 'user_token' => 'user_token#create'
   resources :users
+  post 'users/social'
   devise_for :users
   devise_for :admins
   resources :dependences, only: [:index]

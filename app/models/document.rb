@@ -1,3 +1,3 @@
 class Document < ApplicationRecord
-    mount_uploader :file, DocumentUploader
+    mount_base64_uploader :file, DocumentUploader
 end

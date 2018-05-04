@@ -56,3 +56,4 @@ gem 'wkhtmltopdf-binary'
 gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-base64'

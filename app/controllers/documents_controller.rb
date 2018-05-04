@@ -1,4 +1,6 @@
 class DocumentsController < ApplicationController
+
+  before_action :authenticate_user, only: [:create]
   before_action :set_document, only: [:show, :update, :destroy]
 
   # GET /documents
@@ -15,9 +17,10 @@ class DocumentsController < ApplicationController
 
   # POST /documents
   def create
+
     @document = Document.new(document_params)
 
-    if @document.save
+    if @document.save!
       render json: @document, status: :created, location: @document
     else
       render json: @document.errors, status: :unprocessable_entity
@@ -46,6 +49,7 @@ class DocumentsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def document_params
-      params.require(:document).permit(:address, :name, :type)
+      params.permit(:file)
+      #params.require(:document).permit(:address, :name, :type)
     end
 end

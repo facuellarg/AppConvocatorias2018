@@ -22,4 +22,3 @@ class User < ApplicationRecord
       self.find payload["sub"]
    end
 end
-
