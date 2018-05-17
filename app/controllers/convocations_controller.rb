@@ -1,8 +1,8 @@
 class ConvocationsController < ApplicationController
   before_action :authenticate_user, only: [:search]
-  before_action :authenticate_admin, only: [:create]
+  before_action :authenticate_admin, only: [:create,:admin_convocations,:show_admin]
 
-  before_action :set_convocation, only: [:show, :update, :destroy]
+  before_action :set_convocation, only: [:show, :update, :destroy,:show_admin]
 
   # GET /convocations
   def index
@@ -10,16 +10,29 @@ class ConvocationsController < ApplicationController
 
     render json: @convocations
   end
-
+  def show_admin
+    #render json: @convocation
+    respond_to do |format|
+      format.json {render   json: @convocation.populate_for_admin}
+      format.pdf {render template: 'convocations/template_pdf',pdf: @convocation.name.downcase}
+      format.any {render   json: @convocation.populate_for_admin}
+    end
+  end
   # GET /convocations/1
   def show
     #render json: @convocation
     respond_to do |format|
       format.json {render   json: @convocation}
       format.pdf {render template: 'convocations/template_pdf',pdf: @convocation.name.downcase}
+      format.any {render   json: @convocation}
     end
   end
-
+  def admin_convocations
+    puts params
+    puts 'sndkjasndfkasdnfjkansdfkjnasdn'
+    puts current_admin.convocations.as_json
+    render json: current_admin.convocations.as_json, status: 200
+  end
   # POST /convocations
   def create
     puts 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
@@ -31,7 +44,7 @@ class ConvocationsController < ApplicationController
     convocation_params[:admin_id] = current_admin.id
     @convocation = Convocation.new(self_params)
 
-    if @convocation.save
+    if @convocation.savea
       render json: @convocation, status: :created, location: @convocation
     else
       render json: @convocation.errors, status: :unprocessable_entity

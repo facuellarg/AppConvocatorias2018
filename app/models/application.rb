@@ -1,5 +1,5 @@
 class Application < ApplicationRecord
-  belongs_to :student
+  belongs_to :user
   belongs_to :convocation
 
   has_many :application_documents

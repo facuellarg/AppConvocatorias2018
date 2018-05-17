@@ -10,13 +10,14 @@ require 'faker'
 Dependence.create(name: "Ingenieria")
 Dependence.create(name: "Ciencia")
 
-Admin.create(name: "Julian",lastname: "Garzon",email:"jgarzonj@unal.edu.co",phone_ext:"1123",password:"123456",password_confirmation:"123456",dependence_id:1,permits:"estudiante")
-Admin.create(name: "Bryan",lastname: "Prieto",email:"bfprietoc@unal.edu.co",phone_ext:"1123",password:"123456",password_confirmation:"123456",dependence_id:1,permits:"estudiante")
-Admin.create(name: "Fredy",lastname: "Cuellar",email:"facuellarg@unal.edu.co",phone_ext:"1123",password:"123456",password_confirmation:"123456",dependence_id:1,permits:"estudiante")
+Admin.create(name: "Julian",lastname: "Garzon",email:"jgarzonj@unal.edu.co",password:"123456",password_confirmation:"123456",dependence_id:1,phone_ext:"1123",permits:"profesor")
+User.create(name: "Julian",lastname: "Garzon",email:"jgarzonj@unal.edu.co",password:"123456",password_confirmation:"123456",dependence_id:1,level:"pregrado")
+User.create(name: "Bryan",lastname: "Prieto",email:"bfprietoc@unal.edu.co",password:"123456",password_confirmation:"123456",dependence_id:1,level:"pregrado")
+User.create(name: "Fredy",lastname: "Cuellar",email:"facuellarg@unal.edu.co",password:"123456",password_confirmation:"123456",dependence_id:1,level:"pregrado")
 
 10.times do
     pass = Faker::Internet.password(8)
-    Admin.create(name: Faker::Name.first_name  ,lastname: Faker::Name.last_name,email:Faker::Internet.unique.safe_email,phone_ext:"1123",password: pass,password_confirmation: pass,dependence_id: rand(1..2),permits:"profesor")
+    User.create(name: Faker::Name.first_name  ,lastname: Faker::Name.last_name,email:Faker::Internet.unique.safe_email,password: pass,password_confirmation: pass,dependence_id: rand(1..2),level:"pregrado")
 end
 
 levels = ["pregrado","postgrado"]
@@ -56,12 +57,12 @@ levels = ["pregrado","postgrado"]
     end
    
 end
-
+values_states = ["aprovado","rechazado","interesado"]
 20.times do 
-    Application.create(student_id: rand(1..13),convocation_id: rand(1..50))
+    Application.create(user_id: rand(1..13),convocation_id: rand(1..50),state: values_states[rand(0..2)])
 end
 
 #Convocation.joins(:dependences).where("convocations.level = (?) AND dependences.id IN (?) AND convocations.payout BETWEEN (?) AND (?) AND convocations.duration BETWEEN (?) AND (?) AND convocations.hours_per_week BETWEEN (?) AND (?)","postgrado",Dependence.all.pluck(:id),Convocation.minimum(:payout),Convocation.maximum(:payout),Convocation.minimum(:duration),Convocation.maximum(:duration),Convocation.minimum(:hours_per_week),Convocation.maximum(:hours_per_week)).order(created_at: :desc).distinct
     
-Convocation.joins(:dependences).where("convocations.level = (?) AND dependences.id IN (?) AND convocations.payout BETWEEN (?) AND (?) AND convocations.duration BETWEEN (?) AND (?) AND convocations.hours_per_week BETWEEN (?) AND (?)","postgrado",[1],Convocation.minimum(:payout),Convocation.maximum(:payout),Convocation.minimum(:duration),Convocation.maximum(:duration),Convocation.minimum(:hours_per_week),Convocation.maximum(:hours_per_week)).order(created_at: :desc).distinct
+#Convocation.joins(:dependences).where("convocations.level = (?) AND dependences.id IN (?) AND convocations.payout BETWEEN (?) AND (?) AND convocations.duration BETWEEN (?) AND (?) AND convocations.hours_per_week BETWEEN (?) AND (?)","postgrado",[1],Convocation.minimum(:payout),Convocation.maximum(:payout),Convocation.minimum(:duration),Convocation.maximum(:duration),Convocation.minimum(:hours_per_week),Convocation.maximum(:hours_per_week)).order(created_at: :desc).distinct
   

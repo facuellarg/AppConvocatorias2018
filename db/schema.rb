@@ -51,13 +51,13 @@ ActiveRecord::Schema.define(version: 20180420015221) do
   end
 
   create_table "applications", force: :cascade do |t|
-    t.integer "student_id"
+    t.integer "user_id"
     t.integer "convocation_id"
     t.string "state"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["convocation_id"], name: "index_applications_on_convocation_id"
-    t.index ["student_id"], name: "index_applications_on_student_id"
+    t.index ["user_id"], name: "index_applications_on_user_id"
   end
 
   create_table "convocation_dependences", force: :cascade do |t|

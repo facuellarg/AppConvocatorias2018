@@ -5,7 +5,7 @@ class Convocation < ApplicationRecord
   has_many :dependences, :through => :convocation_dependences
 
   has_many :applications, dependent: :destroy
-  has_many :student, :through => :applications
+  has_many :users, :through => :applications
 
   has_many :requirements, dependent: :destroy
   has_many :activities, dependent: :destroy
@@ -28,7 +28,11 @@ class Convocation < ApplicationRecord
   end
   
   def most_wanted
-    
+    out_obj = []
+    Convocation.all.each do |conv|
+      out_obj.push(:name => conv.name,:count => Application.joins(:user).group(:convocation_id)[con.id])
+    end
+    render out_obj
   end
 
   def populate
@@ -42,4 +46,19 @@ class Convocation < ApplicationRecord
 
     return out_object
   end
+  
+  def populate_for_admin
+    out_object = self.as_json
+    out_object[:approved] = self.applications.where(state:'aprovado').map { |x| x.user.as_json.merge(:application_id => x.id,:state => x.state) }
+    out_object[:interested] = self.applications.where(state:'interesado').map { |x| x.user.as_json.merge(:application_id => x.id,:state => x.state) }
+    out_object[:rejected] = self.applications.where(state:'rechazado').map { |x| x.user.as_json.merge(:application_id => x.id,:state => x.state) }
+    
+    out_object[:dependences] = self.dependences.as_json
+    out_object[:requirements] = self.requirements.as_json
+    out_object[:required_files] = self.required_files.as_json
+    out_object[:profiles] = self.profiles.as_json
+    out_object[:activities] = self.activities.as_json
+    return out_object
+  end
+
 end

@@ -6,7 +6,10 @@ class User < ApplicationRecord
          
   has_many :user_documents
   has_many :documents, through: :user_documents
-
+  
+  has_many :applications
+  has_many :convocation, through: :applications
+  
   belongs_to :dependence
 
   validates :name,:lastname,:email,:dependence, :level, presence: true
