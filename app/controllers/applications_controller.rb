@@ -24,6 +24,7 @@ class ApplicationsController < ApplicationController
       return
     end
     @application = Application.new(application_params)
+    @application.state = "interesado"
     current_user.applications << @application
     if @application.save
       render json: @application, status: :created
