@@ -1,6 +1,7 @@
 class ApplicationsController < ApplicationController
+  before_action :authenticate_user, only: [:create]
   before_action :set_application, only: [:show, :update, :destroy]
-
+  
   # GET /applications
   def index
     
@@ -18,6 +19,10 @@ class ApplicationsController < ApplicationController
   def create
     self_params = application_params
     
+    if not Application.where('applications.convocation_id = ? AND applications.user_id = ?',application_params[:convocation_id],current_user.id).blank?
+      render json: 'Este usuario ya aplico anteriormente',status: 400
+      return
+    end
     @application = Application.new(application_params)
     current_user.applications << @application
     if @application.save
@@ -29,7 +34,12 @@ class ApplicationsController < ApplicationController
 
   # PATCH/PUT /applications/1
   def update
-    if @application.update(application_params)
+    puts 'asdnasfdbaskfbasjnfkjabsdkfbaskjdbkjasfb XXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+    puts @application.as_json
+    puts 'asdnasfdbaskfbasjnfkjabsdkfbaskjdbkjasfb XXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+    if @application.update(state: application_params[:state])
+      
+      ApplicationMailer.change_state(@application).deliver_later
       render json: @application
     else
       render json: @application.errors, status: :unprocessable_entity

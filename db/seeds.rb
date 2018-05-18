@@ -57,7 +57,7 @@ levels = ["pregrado","postgrado"]
     end
    
 end
-values_states = ["aprovado","rechazado","interesado"]
+values_states = ["aprobado","rechazado","interesado"]
 20.times do 
     Application.create(user_id: rand(1..13),convocation_id: rand(1..50),state: values_states[rand(0..2)])
 end

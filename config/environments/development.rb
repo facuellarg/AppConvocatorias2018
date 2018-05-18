@@ -37,7 +37,22 @@ Rails.application.configure do
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
+# configuracion del mailer ########################################################
+    config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.delivery_method = :smtp
+# modificacion del host Cambiar al momento de desplegar
+    config.action_mailer.default_url_options = { :host => "https://convocatorias-juligarji.c9users.io/" }
+    config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    #domain:"https://app_rails.herokuapp.com",
+    authentication: "plain",
+    enable_starttls_auto:true,
+   user_name: "ifreelanceapp@gmail.com",
+   password: "ifreelance1234"
+  }
 
+# #################################################################################
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 

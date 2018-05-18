@@ -27,12 +27,12 @@ class Convocation < ApplicationRecord
     
   end
   
-  def most_wanted
+  def self.most_wanted
     out_obj = []
-    Convocation.all.each do |conv|
-      out_obj.push(:name => conv.name,:count => Application.joins(:user).group(:convocation_id)[con.id])
+    Application.joins(:user).group(:convocation_id).paginate(:page=>1,:per_page=>10).each do |app|
+      out_obj.push(:name => app.convocation.name,:count => Application.joins(:user).group(:convocation_id).count[app.convocation.id])
     end
-    render out_obj
+    return out_obj
   end
 
   def populate
@@ -49,7 +49,7 @@ class Convocation < ApplicationRecord
   
   def populate_for_admin
     out_object = self.as_json
-    out_object[:approved] = self.applications.where(state:'aprovado').map { |x| x.user.as_json.merge(:application_id => x.id,:state => x.state) }
+    out_object[:approved] = self.applications.where(state:'aprobado').map { |x| x.user.as_json.merge(:application_id => x.id,:state => x.state) }
     out_object[:interested] = self.applications.where(state:'interesado').map { |x| x.user.as_json.merge(:application_id => x.id,:state => x.state) }
     out_object[:rejected] = self.applications.where(state:'rechazado').map { |x| x.user.as_json.merge(:application_id => x.id,:state => x.state) }
     

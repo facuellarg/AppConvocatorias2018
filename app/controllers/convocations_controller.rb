@@ -1,6 +1,6 @@
 class ConvocationsController < ApplicationController
   before_action :authenticate_user, only: [:search]
-  before_action :authenticate_admin, only: [:create,:admin_convocations,:show_admin]
+  before_action :authenticate_admin, only: [:create,:admin_convocations,:show_admin,:most_wanted]
 
   before_action :set_convocation, only: [:show, :update, :destroy,:show_admin]
 
@@ -35,16 +35,16 @@ class ConvocationsController < ApplicationController
   end
   # POST /convocations
   def create
-    puts 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
-    puts current_admin.as_json
-    puts 'ssssssssssssssssssssssssssssssssss'
+    puts 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+    puts params.as_json
+    puts 'ssssssssssssssssssssssssssssssssssxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
     #return
     self_params = convocation_params.as_json
     self_params[:admin_id] = current_admin.id
     convocation_params[:admin_id] = current_admin.id
     @convocation = Convocation.new(self_params)
 
-    if @convocation.savea
+    if @convocation.save
       render json: @convocation, status: :created, location: @convocation
     else
       render json: @convocation.errors, status: :unprocessable_entity
@@ -76,6 +76,9 @@ class ConvocationsController < ApplicationController
     out_object[:pages] = (search_convocatories.count / 10.0).ceil
     
     render json: out_object
+  end
+  def most_wanted
+    render json: Convocation.most_wanted, status: 200
   end
   # DELETE /convocations/1
   def destroy

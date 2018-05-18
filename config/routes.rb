@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :admins
   resources :convocations, only: [:create,:show]
+  get 'wanted_convocations' => 'convocations#most_wanted'
   get 'admin_convocations' => 'convocations#admin_convocations'
   get 'admin_convocation_details' => 'convocations#show_admin'
   get 'admin_files' => 'documents#admin_files'

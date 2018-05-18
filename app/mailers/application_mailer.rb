@@ -1,4 +1,10 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  default from: 'ifreelanceapp@gmail.com'
   layout 'mailer'
+  
+  def change_state(application)
+    @application = application
+
+    mail to: @application.user.email
+  end
 end
