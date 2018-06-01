@@ -1,120 +1,156 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+  <meta charset="UTF-8">
 	<title>PDF</title>
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<head>
-  		<meta charset="UTF-8">
-	</head>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Oswald" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://convocatorias-juligarji.c9users.io/style.css">
+    
 </head>
 
 <body>
-   
-   <h2 class="text-center"><%= @convocation.name %></h2>
-   <p><strong>Descripcion:</strong></p>
-  <p><%= @convocation.description %></p>            
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Parametro</th>
-        <th>valor</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Estudiantes de:</td>
-        <td><%= @convocation.level %></td>
-      </tr>
-      <tr>
-        <td>Fecha cierre</td>
-        <td><%= @convocation.end_date %></td>
-      </tr>
-      <tr>
-        <td>Vacantes</td>
-        <td><%= @convocation.vacants %></td>
-      </tr>
-      <tr>
-        <td>Horas por Semana</td>
-        <td><%= @convocation.hours_per_week %></td>
-      </tr>
-      <tr>
-        <td>Estimulo Economico</td>
-        <td><%= @convocation.payout %></td>
-      </tr>
-      <tr>
-        <td>Duracion en Dias</td>
-        <td><%= @convocation.duration %></td>
-      </tr>
-      <tr>
-        <td>Creada en:</td>
-        <td><%= @convocation.created_at %></td>
-      </tr>
-    </tbody>
-  </table>
-  <p><strong>Detalles Adicionales</strong></p>
-  <% if not @convocation.dependences.blank? %>
-      <div class="panel panel-default col-md-6">
-          <div class="panel-heading">Facultades</div>
-          <div class="panel-body">
-              <% @convocation.dependences.each do |dep| %>
-                  <p><%= dep.name %></p>
-              <% end %>
-          </div>
-      </div>
-  <% end %>
-  
-  <% if not @convocation.requirements.blank? %>
-      <div class="panel panel-default col-md-6">
-          <div class="panel-heading">Requerimientos</div>
-          <div class="panel-body">
-              <% @convocation.requirements.each do |dep| %>
-                  <p><%= dep.description %></p>
-              <% end %>
-          </div>
-      </div>
-  <% end %>
-  
-  <% if not @convocation.required_files.blank? %>
-      <div class="panel panel-default col-md-6">
-          <div class="panel-heading">Archivos Requeridos</div>
-          <div class="panel-body">
-              <% @convocation.required_files.each do |dep| %>
-                  <p><%= dep.name %></p>
-              <% end %>
-          </div>
-      </div>
-  <% end %>
-  
-  <% if not @convocation.profiles.blank? %>
-      <div class="panel panel-default col-md-6">
-          <div class="panel-heading">Perfil</div>
-          <div class="panel-body">
-              <% @convocation.profiles.each do |dep| %>
-                  <p><%= dep.description %></p>
-              <% end %>
-          </div>
-      </div>
-  <% end %>
-  
-   <% if not @convocation.activities.blank? %>
-       <div class="panel panel-default col-md-6">
-          <div class="panel-heading">Actividades</div>
-          <div class="panel-body">
-              <% @convocation.activities.each do |dep| %>
-                  <p><%= dep.description %></p>
-              <% end %>
-          </div>
-      </div>
-  <% end %>
-  
-  <div class="panel panel-default">
-      <div class="panel-heading">Panel Heading</div>
-      <div class="panel-body">Panel Content</div>
+   <div class="row">
+       
+   </div>
+   <div class="container">
+       <div class="row">
+            <div class="col-md-4 col-md-push-4">
+                <img width="50%" src="https://convocatorias-juligarji.c9users.io/logo.png" alt="">
+            </div>
+       </div>
+       <hr>
+       <div class="row">
+            <h2 class="text-center">
+                    CONVOCATORIA PARA SELECCIÓN Y VINCULACIÓN DE ESTUDIANTE(S)
+            </h2>
+            <h2 class="text-center">
+                    <%= @convocation.name %>
+            </h2>
+            <p class="text-center">
+                    <%= @convocation.description %>
+            </p>
+       </div>
+   </div>
+   <div class="container">
+     
+            <div class="col-md-8 col-md-push-2">
+                    <table class="table">
+                           
+                            <tbody>
+                                <tr>
+                                    
+                                <td  width="20%" class="titulo-tabla">Estudiantes de:</td>
+                                <td class="text-center" width="80%"><%= @convocation.level %></td>
+                                </tr>
+                                <tr>
+                                <td class="titulo-tabla">Fecha cierre</td>
+                                <td class="text-center"><%= @convocation.end_date %></td>
+                                </tr>
+                                <tr>
+                                <td class="titulo-tabla">Vacantes</td>
+                                <td class="text-center"><%= @convocation.vacants %></td>
+                                </tr>
+                                <tr>
+                                <td class="titulo-tabla">Horas por Semana</td>
+                                <td class="text-center"><%= @convocation.hours_per_week %></td>
+                                </tr>
+                                <tr>
+                                <td class="titulo-tabla">Estimulo Economico</td>
+                                <td class="text-center"><%= @convocation.payout %></td>
+                                </tr>
+                                <tr>
+                                <td class="titulo-tabla">Duracion en Dias</td>
+                                <td class="text-center"><%= @convocation.duration %></td>
+                                </tr>
+                                <tr>
+                                <td class="titulo-tabla">Creada en:</td>
+                                <td class="text-center"><%= @convocation.created_at.strftime("%F")  %></td>
+                                </tr>
+                            </tbody>
+                        </table>  
+            </div>
+     
+        
+   </div>         
+   <hr>
+  <div class="container">
+
+        <h3 class="text-center"><strong>Detalles Adicionales</strong></h3>
+        <% if not @convocation.dependences.blank? %>
+            <div class="panel panel-default col-md-6">
+                <div class="panel-heading text-center"><strong>Facultades</strong></div>
+                <div class="panel-body">
+                        <ul class="list-group">
+                                <% @convocation.dependences.each do |dep| %>
+                                    <li class="list-group-item"><%= dep.name %></li>
+                                <% end %>
+                        </ul>
+                </div>
+            </div>
+        <% end %>
+        
+        <% if not @convocation.requirements.blank? %>
+            <div class="panel panel-default col-md-6">
+        
+                <div class="panel-heading text-center"><strong>Requerimientos</strong></div>
+                <div class="panel-body">
+                        <ul class="list-group">
+                            <% @convocation.requirements.each do |dep| %>
+                                <li class="list-group-item"><%= dep.description %></li>
+                            <% end %>
+                        </ul>
+                </div>
+            </div>
+        <% end %>
+        
+        <% if not @convocation.required_files.blank? %>
+            <div class="panel panel-default col-md-6">
+                <div class="panel-heading text-center"><strong>Archivos Requeridos</strong></div>
+                <div class="panel-body">
+                        <ul class="list-group">
+                    
+                            <% @convocation.required_files.each do |dep| %>
+                              
+                                <li class="list-group-item"><%= dep.name %></li>
+                            <% end %>
+                        </ul>
+                </div>
+            </div>
+        <% end %>
+        
+        <% if not @convocation.profiles.blank? %>
+            <div class="panel panel-default col-md-6">
+                <div class="panel-heading text-center"><strong>Perfil</strong></div>
+                <div class="panel-body">
+                        <ul class="list-group">
+                    
+                            <% @convocation.profiles.each do |dep| %>
+                                <li class="list-group-item"><%= dep.description %></li>
+                            <% end %>
+                        </ul>
+                </div>
+            </div>
+        <% end %>
+        
+        <% if not @convocation.activities.blank? %>
+        <div class="panel panel-default col-md-6 col-md-push-3">
+            <div class="panel-heading text-center"><strong>Actividades</strong></div>
+            <div class="panel-body">
+                    <ul class="list-group">
+                        <% @convocation.activities.each do |dep| %>
+                            <li class="list-group-item"><%= dep.description %></li>
+                        <% end %>
+                    </ul>
+            </div>
+        </div>
+        <% end %>
   </div>
-   
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <hr>
+  
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>
 </html>

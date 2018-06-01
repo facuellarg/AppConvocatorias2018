@@ -1,5 +1,5 @@
 class ApplicationsController < ApplicationController
-  before_action :authenticate_user, only: [:create]
+  before_action :authenticate_user, only: [:create,:index]
   before_action :set_application, only: [:show, :update, :destroy]
   
   # GET /applications
@@ -35,9 +35,6 @@ class ApplicationsController < ApplicationController
 
   # PATCH/PUT /applications/1
   def update
-    puts 'asdnasfdbaskfbasjnfkjabsdkfbaskjdbkjasfb XXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
-    puts @application.as_json
-    puts 'asdnasfdbaskfbasjnfkjabsdkfbaskjdbkjasfb XXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
     if @application.update(state: application_params[:state])
       
       ApplicationMailer.change_state(@application).deliver_later

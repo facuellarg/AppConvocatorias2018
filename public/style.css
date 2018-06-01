@@ -1,0 +1,14 @@
+body{
+    font-family: 'Muli', sans-serif;
+    font-size:18px;
+}
+h2  {
+    font-family: 'Oswald', sans-serif;
+}
+div.panel-heading{
+    font-family: 'Oswald', sans-serif;
+    font-size:25px;
+}
+td.titulo-tabla{
+    font-family: 'Oswald', sans-serif;
+}

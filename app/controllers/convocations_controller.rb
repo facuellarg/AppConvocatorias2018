@@ -23,7 +23,7 @@ class ConvocationsController < ApplicationController
     #render json: @convocation
     respond_to do |format|
       format.json {render   json: @convocation}
-      format.pdf {render template: 'convocations/template_pdf',pdf: @convocation.name.downcase}
+      format.pdf {render template: 'convocations/template_pdf', pdf: @convocation.name.downcase}
       format.any {render   json: @convocation}
     end
   end
